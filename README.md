@@ -21,11 +21,12 @@ Scraped programme of [SuomiAreena 2026](https://www.suomiareena.fi/suomiareena-2
 ## Run
 
 ```bash
-python3 scrape.py          # parse list page + fetch each event's detail (checkpointed, skip-done)
-python3 scrape.py --build  # rebuild events.json + the two HTML pages from the checkpoint (no refetch)
+python3 scrape.py            # parse list page + fetch each event's detail (checkpointed, skip-done)
+python3 scrape.py --refresh  # re-download the list + refetch events still missing speakers, then rebuild
+python3 scrape.py --build    # rebuild events.json + the two HTML pages from the checkpoint (no refetch)
 ```
 
-To force a fresh crawl, delete `events.jsonl` first.
+`--refresh` is the one to run later, once the organiser has published more speakers: it re-fetches every event currently showing **"ei vielä tiedossa"** (and any that errored), picks up newly added events, and rewrites both pages. To force a full fresh crawl instead, delete `events.jsonl` first.
 
 ## Scraping approach
 

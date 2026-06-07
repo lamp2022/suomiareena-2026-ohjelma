@@ -199,7 +199,15 @@ def load_done():
     return done
 
 
-def crawl():
+def refetch_list():
+    """Re-download the source list page so new/changed events are picked up."""
+    print(f"downloading {LIST_URL}")
+    open(LIST_HTML, "w").write(fetch(LIST_URL))
+
+
+def crawl(refresh=False):
+    if refresh:
+        refetch_list()
     if not os.path.exists(LIST_HTML):
         print(f"missing {LIST_HTML}; download list page first", file=sys.stderr)
         sys.exit(1)
@@ -210,10 +218,20 @@ def crawl():
     done = load_done()
     print(f"checkpoint has {len(done)} done")
 
+    # in refresh mode, force-refetch events still missing speakers (and any that errored)
+    force = set()
+    if refresh:
+        force = {
+            pid for pid, e in done.items() if not e.get("speakers") or e.get("error")
+        }
+        print(
+            f"refresh: {force and len(force) or 0} events without speakers to refetch"
+        )
+
     with open(CHECKPOINT, "a") as ckpt:
         for i, stub in enumerate(stubs, 1):
             pid = stub["post_id"]
-            if pid in done:
+            if pid in done and pid not in force:
                 continue
             rec = dict(stub)
             try:
@@ -231,9 +249,9 @@ def crawl():
                 )
             ckpt.write(json.dumps(rec, ensure_ascii=False) + "\n")
             ckpt.flush()
-            done[pid] = rec
+            done[pid] = rec  # latest record wins on next load_done()
             if i % 25 == 0 or i == total:
-                print(f"{i}/{total} done")
+                print(f"{i}/{total} scanned")
             time.sleep(0.4 + random.random() * 0.6)  # polite jitter
 
     print("crawl complete")
@@ -480,5 +498,7 @@ def write_pages(events):
 if __name__ == "__main__":
     if "--build" in sys.argv:
         build()
+    elif "--refresh" in sys.argv:
+        crawl(refresh=True)
     else:
         crawl()
