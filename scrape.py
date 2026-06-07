@@ -30,8 +30,9 @@ LIST_HTML = os.path.join(HERE, "ohjelma_raw.html")
 CHECKPOINT = os.path.join(HERE, "events.jsonl")
 FINAL_JSON = os.path.join(HERE, "events.json")
 TABLE_HTML = os.path.join(HERE, "ohjelma_table.html")  # legacy combined page
-OHJELMA_HTML = os.path.join(HERE, "ohjelma.html")  # programme only
-PUHUJAT_HTML = os.path.join(HERE, "puhujat.html")  # speakers only
+INDEX_HTML = os.path.join(HERE, "index.html")  # single page, Ohjelma/Puhujat toggle
+OHJELMA_HTML = os.path.join(HERE, "ohjelma.html")  # redirect -> index.html#ohjelma
+PUHUJAT_HTML = os.path.join(HERE, "puhujat.html")  # redirect -> index.html#puhujat
 
 LIST_URL = "https://www.suomiareena.fi/suomiareena-2026/ohjelma/"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 scrape-suomiareena/1.0"
@@ -315,8 +316,7 @@ def build():
         json.dump(events, f, ensure_ascii=False, indent=2)
     print(f"wrote {FINAL_JSON} ({len(events)} events)")
     write_pages(events)
-    print(f"wrote {OHJELMA_HTML}")
-    print(f"wrote {PUHUJAT_HTML}")
+    print(f"wrote {INDEX_HTML} (+ ohjelma.html/puhujat.html redirects)")
 
 
 def esc(s):
@@ -380,6 +380,7 @@ PAGE_CSS = """
   .meta { color:var(--muted); font-size:13px; }
   .tbd { color:#b00; font-style:italic; }
   .prog td.title, .spk td.title { font-weight:600; }
+  .view[hidden] { display:none; }
   /* phones: tighter, smaller type, drop the lower-value "Aika-väli" column */
   @media (max-width:640px) {
     body { padding:0 10px 40px; font-size:14px; }
@@ -396,29 +397,44 @@ PAGE_CSS = """
 """
 
 
-def _page(title, subtitle, active, sections):
-    def tab(href, label, key):
-        cls = ' class="active"' if key == active else ""
-        return f'<a href="{href}"{cls}>{label}</a>'
+TOGGLE_JS = """
+  const views = { ohjelma: document.getElementById('view-ohjelma'),
+                  puhujat: document.getElementById('view-puhujat') };
+  const tabs = document.querySelectorAll('nav.tabs a');
+  function show(view) {
+    if (!views[view]) view = 'ohjelma';
+    for (const k in views) views[k].hidden = (k !== view);
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.view === view));
+    document.title = (view === 'puhujat' ? 'SuomiAreena 2026 – Puhujat'
+                                         : 'SuomiAreena 2026 – Ohjelma');
+  }
+  function fromHash() { show((location.hash || '#ohjelma').slice(1)); }
+  window.addEventListener('hashchange', fromHash);
+  fromHash();
+"""
 
+
+def _page(subtitle, ohjelma_sections, puhujat_sections):
     return f"""<!DOCTYPE html>
 <html lang="fi">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(title)}</title>
+<title>SuomiAreena 2026 – Ohjelma</title>
 <style>{PAGE_CSS}</style>
 </head>
 <body>
   <header class="top">
-    <h1>{esc(title)}</h1>
+    <h1>SuomiAreena 2026</h1>
     <p class="sub">{esc(subtitle)}</p>
     <nav class="tabs">
-      {tab("ohjelma.html", "Ohjelma", "ohjelma")}
-      {tab("puhujat.html", "Puhujat", "puhujat")}
+      <a href="#ohjelma" data-view="ohjelma" class="active">Ohjelma</a>
+      <a href="#puhujat" data-view="puhujat">Puhujat</a>
     </nav>
   </header>
-  {"".join(sections)}
+  <div id="view-ohjelma" class="view">{"".join(ohjelma_sections)}</div>
+  <div id="view-puhujat" class="view" hidden>{"".join(puhujat_sections)}</div>
+  <script>{TOGGLE_JS}</script>
 </body>
 </html>"""
 
@@ -489,10 +505,18 @@ def write_pages(events):
     total = len(events)
     sub = f"{total} tapahtumaa · 23.–26.6.2026 · Pori · värit ryhmittelevät tapahtumat alkamisajan mukaan · lähde: suomiareena.fi"
 
-    with open(OHJELMA_HTML, "w") as f:
-        f.write(_page("SuomiAreena 2026 – Ohjelma", sub, "ohjelma", ohjelma_sections))
-    with open(PUHUJAT_HTML, "w") as f:
-        f.write(_page("SuomiAreena 2026 – Puhujat", sub, "puhujat", puhujat_sections))
+    page = _page(sub, ohjelma_sections, puhujat_sections)
+    with open(INDEX_HTML, "w") as f:
+        f.write(page)
+    # keep the old direct URLs alive as redirects into the single page's views
+    for path, view in ((OHJELMA_HTML, "ohjelma"), (PUHUJAT_HTML, "puhujat")):
+        with open(path, "w") as f:
+            f.write(
+                '<!DOCTYPE html><html lang="fi"><head><meta charset="utf-8">'
+                f'<meta http-equiv="refresh" content="0; url=index.html#{view}">'
+                f"<title>SuomiAreena 2026</title></head><body>"
+                f'<a href="index.html#{view}">SuomiAreena 2026</a></body></html>'
+            )
 
 
 if __name__ == "__main__":

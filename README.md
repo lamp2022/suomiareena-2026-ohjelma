@@ -2,9 +2,11 @@
 
 Scraped programme of [SuomiAreena 2026](https://www.suomiareena.fi/suomiareena-2026/ohjelma/) (Pori, 23.–26.6.2026), rendered as two browsable tables.
 
-**Live pages** (GitHub Pages):
-- **Ohjelma** — programme, colour-grouped by start time → `ohjelma.html`
-- **Puhujat** — speakers per event, with date → `puhujat.html`
+**Live page** (GitHub Pages): one page, `index.html`, with an **Ohjelma / Puhujat** toggle.
+- **Ohjelma** — programme, colour-grouped by start time (`#ohjelma`)
+- **Puhujat** — speakers per event, with date (`#puhujat`)
+
+`ohjelma.html` and `puhujat.html` are kept as redirects into the toggle's two views, so old links still work.
 
 215 events across four days. Rows are coloured by start-time slot: every event sharing a start time gets the same colour, the next slot a different one. A sticky day banner keeps the date visible while scrolling. Speakers not yet published by the organiser show **"ei vielä tiedossa"**. Each event's full description is stored in `events.json` (not shown in the tables).
 
@@ -15,7 +17,8 @@ Scraped programme of [SuomiAreena 2026](https://www.suomiareena.fi/suomiareena-2
 | `scrape.py` | Scraper + page builder |
 | `events.json` | Final dataset (events incl. description + speakers) |
 | `events.jsonl` | Append-only crawl checkpoint (resumable) |
-| `ohjelma.html` / `puhujat.html` | The two rendered pages |
+| `index.html` | The rendered page (Ohjelma/Puhujat toggle) |
+| `ohjelma.html` / `puhujat.html` | Redirects into `index.html`'s two views |
 | `ohjelma_raw.html` | Saved snapshot of the source list page |
 
 ## Run
