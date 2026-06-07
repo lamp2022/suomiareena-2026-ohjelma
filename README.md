@@ -1,0 +1,41 @@
+# SuomiAreena 2026 – Ohjelma
+
+Scraped programme of [SuomiAreena 2026](https://www.suomiareena.fi/suomiareena-2026/ohjelma/) (Pori, 23.–26.6.2026), rendered as two browsable tables.
+
+**Live pages** (GitHub Pages):
+- **Ohjelma** — programme, colour-grouped by start time → `ohjelma.html`
+- **Puhujat** — speakers per event, with date → `puhujat.html`
+
+215 events across four days. Rows are coloured by start-time slot: every event sharing a start time gets the same colour, the next slot a different one. A sticky day banner keeps the date visible while scrolling. Speakers not yet published by the organiser show **"ei vielä tiedossa"**. Each event's full description is stored in `events.json` (not shown in the tables).
+
+## Files
+
+| File | What |
+|------|------|
+| `scrape.py` | Scraper + page builder |
+| `events.json` | Final dataset (events incl. description + speakers) |
+| `events.jsonl` | Append-only crawl checkpoint (resumable) |
+| `ohjelma.html` / `puhujat.html` | The two rendered pages |
+| `ohjelma_raw.html` | Saved snapshot of the source list page |
+
+## Run
+
+```bash
+python3 scrape.py          # parse list page + fetch each event's detail (checkpointed, skip-done)
+python3 scrape.py --build  # rebuild events.json + the two HTML pages from the checkpoint (no refetch)
+```
+
+To force a fresh crawl, delete `events.jsonl` first.
+
+## Scraping approach
+
+Principles mirrored from a private property-scraper (`kohdescraper`):
+
+- **HTTP fetch + HTML parse** — the source is server-rendered WordPress, so no headless browser is needed.
+- **Checkpointed, resumable batches** — every event detail is appended to `events.jsonl`; already-fetched ids are skipped on restart.
+- **Polite jittered crawl** — short randomised delay between detail fetches.
+- **Normalizer → one canonical shape** — heterogeneous markup mapped to a single event record.
+- **No silent errors** — a failed fetch is recorded with its reason, never swallowed.
+- **Conditional-required fields** — a field absent in the source is empty, not a failure.
+
+Data © SuomiAreena. This repo is an unofficial, read-only rendering.
