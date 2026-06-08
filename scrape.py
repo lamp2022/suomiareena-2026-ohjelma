@@ -268,18 +268,21 @@ DAY_NAMES = {
     "26.6.2026": "Pe 26.6.",
 }
 
-# 10-colour palette; cycles per distinct start-time within a day
+# 10 distinct hues, cycled per distinct start-time within a day.
+# Each entry = (row tint, time-text accent). Grouping reads as a faint full-row
+# wash plus a saturated, bold start-time — high contrast for outdoor/sunlight use.
+# OKLCH, tinted neutrals, no side-stripe accents (impeccable design laws).
 PALETTE = [
-    "#e8f1fb",
-    "#fdefe3",
-    "#e9f6ec",
-    "#f6e9f3",
-    "#fbf4e0",
-    "#e5f4f6",
-    "#f0eafb",
-    "#f7e9ea",
-    "#eef3e0",
-    "#e8ecf7",
+    ("oklch(0.955 0.032 255)", "oklch(0.46 0.150 255)"),  # blue
+    ("oklch(0.955 0.034 60)", "oklch(0.50 0.130 60)"),  # amber
+    ("oklch(0.955 0.034 150)", "oklch(0.47 0.130 150)"),  # green
+    ("oklch(0.955 0.032 330)", "oklch(0.48 0.160 330)"),  # magenta
+    ("oklch(0.958 0.036 95)", "oklch(0.52 0.130 95)"),  # gold
+    ("oklch(0.955 0.032 205)", "oklch(0.47 0.120 205)"),  # teal
+    ("oklch(0.953 0.034 290)", "oklch(0.47 0.160 290)"),  # violet
+    ("oklch(0.955 0.034 28)", "oklch(0.50 0.170 28)"),  # red
+    ("oklch(0.957 0.034 130)", "oklch(0.48 0.120 130)"),  # olive
+    ("oklch(0.953 0.032 270)", "oklch(0.46 0.160 270)"),  # indigo
 ]
 
 
@@ -351,44 +354,55 @@ def _color_map(evs):
 
 # shared stylesheet for both pages (mobile-first, responsive)
 PAGE_CSS = """
-  :root { --ink:#1a1a1a; --line:#e2e2e2; --muted:#666; --banner:#1a1a1a; --bannerH:40px; }
+  :root { --ink:oklch(0.24 0.012 255); --line:oklch(0.87 0.008 255);
+          --muted:oklch(0.48 0.012 255); --banner:oklch(0.26 0.02 255);
+          --th:oklch(0.30 0.015 255); --link:oklch(0.45 0.150 255);
+          --bg:oklch(0.985 0.004 255); --bannerH:40px; }
   * { box-sizing:border-box; }
   html { -webkit-text-size-adjust:100%; }
   body { font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-         color:var(--ink); margin:0; padding:0 16px 48px; background:#fafafa; }
-  header.top { padding:18px 0 12px; border-bottom:1px solid var(--line); }
+         color:var(--ink); margin:0; padding:0 16px 48px; background:var(--bg); }
+  header.top { padding:18px 0 12px; border-bottom:2px solid var(--ink); }
   h1 { font-size:22px; margin:0 0 4px; }
   .sub { color:var(--muted); margin:0; font-size:12.5px; }
   nav.tabs { margin:12px 0 0; display:flex; gap:8px; }
   nav.tabs a { font-size:14px; font-weight:600; text-decoration:none; color:var(--ink);
-               padding:8px 18px; border:1px solid var(--line); border-radius:999px; background:#fff; }
+               padding:8px 18px; border:1px solid var(--ink); border-radius:999px; background:#fff; }
   nav.tabs a.active { background:var(--ink); color:#fff; border-color:var(--ink); }
   section { margin:0 0 8px; }
   /* sticky day banner — keeps the date visible while scrolling a long day */
   .day { position:sticky; top:0; z-index:5; height:var(--bannerH); display:flex; align-items:center;
          gap:10px; background:var(--banner); color:#fff; padding:0 12px; font-size:16px; font-weight:700;
          letter-spacing:.02em; box-shadow:0 1px 0 rgba(0,0,0,.15); }
-  .day .cnt { font-size:12px; font-weight:400; opacity:.75; }
-  table { border-collapse:collapse; width:100%; background:#fff; box-shadow:0 1px 2px rgba(0,0,0,.06);
-          margin:0 0 24px; }
-  th, td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
-  th { background:#3a3a3a; color:#fff; font-size:11px; text-transform:uppercase; letter-spacing:.04em;
+  .day .cnt { font-size:12px; font-weight:400; opacity:.8; }
+  table { border-collapse:collapse; width:100%; background:transparent; margin:0 0 24px; }
+  th, td { text-align:left; padding:9px 11px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { background:var(--th); color:#f6f7f9; font-size:11px; text-transform:uppercase; letter-spacing:.04em;
        position:sticky; top:var(--bannerH); z-index:4; }
-  td.t { white-space:nowrap; font-variant-numeric:tabular-nums; }
-  td a { color:#0a52b5; text-decoration:none; }
+  td.t { white-space:nowrap; font-variant-numeric:tabular-nums; font-weight:700; }
+  td.t.rng { font-weight:400; color:var(--muted); }
+  td a { color:var(--link); text-decoration:none; font-weight:600; }
   td a:hover { text-decoration:underline; }
-  .meta { color:var(--muted); font-size:13px; }
-  .tbd { color:#b00; font-style:italic; }
+  .meta { color:var(--muted); font-size:13px; font-weight:400; }
+  .tbd { color:oklch(0.52 0.18 25); font-style:italic; }
   .prog td.title, .spk td.title { font-weight:600; }
   .view[hidden] { display:none; }
-  /* phones: tighter, smaller type, drop the lower-value "Aika-väli" column */
+  /* phones: each row becomes a self-contained block — no sideways scroll outdoors.
+     thead is hidden, every cell carries its own label, group tint stays as the wash. */
   @media (max-width:640px) {
-    body { padding:0 10px 40px; font-size:14px; }
+    body { padding:0 11px 40px; font-size:15px; }
     h1 { font-size:19px; }
-    th, td { padding:7px 7px; }
-    th { font-size:10px; }
-    .meta { font-size:12px; }
-    .prog th:nth-child(2), .prog td:nth-child(2) { display:none; }  /* hide Aika-väli; full range stays in JSON + detail link */
+    table { margin:0 0 14px; }
+    thead { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+    tbody tr { display:block; border:1px solid var(--line); border-radius:10px;
+               margin:0 0 9px; padding:11px 13px; }
+    td { display:block; border:0; padding:1px 0; overflow-wrap:anywhere; }
+    td::before { content:attr(data-label); display:block; font-size:10.5px; font-weight:700;
+                 text-transform:uppercase; letter-spacing:.03em; color:var(--muted); margin-top:7px; }
+    td.t { font-size:19px; font-weight:800; line-height:1.15; margin-bottom:2px; }
+    td.title { font-size:16px; line-height:1.3; }
+    td.t::before, td.title::before { content:none; }
+    .prog td.rng { display:none; }   /* Aika-väli folds away on phones */
   }
   @media print {
     .day { position:static; } th { position:static; } nav.tabs { display:none; }
@@ -414,6 +428,46 @@ TOGGLE_JS = """
 """
 
 
+# Cosmetic client-side gate. NOT real security — the password is visible in the
+# page source. Fine as a soft gate for already-public event data only.
+GATE_PASSWORD = "***REMOVED***"
+GATE_CSS = """
+  #gate { position:fixed; inset:0; z-index:1000; background:#1a1a1a; color:#fff;
+          display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px;
+          font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; padding:24px; }
+  #gate h2 { margin:0; font-size:20px; font-weight:700; }
+  #gate input { font-size:16px; padding:11px 14px; border:1px solid #555; border-radius:8px;
+                background:#222; color:#fff; width:min(320px,90vw); }
+  #gate button { font-size:15px; font-weight:600; padding:10px 22px; border:0; border-radius:999px;
+                 background:#fff; color:#1a1a1a; cursor:pointer; }
+  #gate .err { color:#ff8a7a; font-size:14px; min-height:1.2em; }
+  body.locked { overflow:hidden; }
+  body.locked main, body.locked .view, body.locked header.top { filter:blur(8px); pointer-events:none; }
+"""
+GATE_HTML = """
+  <div id="gate">
+    <h2>SuomiAreena 2026</h2>
+    <input id="gate-pw" type="password" placeholder="Salasana" autocomplete="current-password" autofocus>
+    <button id="gate-go">Kirjaudu</button>
+    <div class="err" id="gate-err"></div>
+  </div>"""
+GATE_JS = """
+  (function(){
+    var PW=%s, KEY='sa2026_ok';
+    var g=document.getElementById('gate');
+    function unlock(){ g.remove(); document.body.classList.remove('locked'); }
+    if (sessionStorage.getItem(KEY)==='1'){ unlock(); return; }
+    document.body.classList.add('locked');
+    function tryit(){
+      if (document.getElementById('gate-pw').value===PW){ sessionStorage.setItem(KEY,'1'); unlock(); }
+      else { document.getElementById('gate-err').textContent='Väärä salasana.'; }
+    }
+    document.getElementById('gate-go').addEventListener('click', tryit);
+    document.getElementById('gate-pw').addEventListener('keydown', function(e){ if(e.key==='Enter') tryit(); });
+  })();
+""" % ('"' + GATE_PASSWORD + '"')
+
+
 def _page(subtitle, ohjelma_sections, puhujat_sections):
     return f"""<!DOCTYPE html>
 <html lang="fi">
@@ -421,9 +475,10 @@ def _page(subtitle, ohjelma_sections, puhujat_sections):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SuomiAreena 2026 – Ohjelma</title>
-<style>{PAGE_CSS}</style>
+<style>{PAGE_CSS}{GATE_CSS}</style>
 </head>
-<body>
+<body class="locked">
+  {GATE_HTML}
   <header class="top">
     <h1>SuomiAreena 2026</h1>
     <p class="sub">{esc(subtitle)}</p>
@@ -434,6 +489,7 @@ def _page(subtitle, ohjelma_sections, puhujat_sections):
   </header>
   <div id="view-ohjelma" class="view">{"".join(ohjelma_sections)}</div>
   <div id="view-puhujat" class="view" hidden>{"".join(puhujat_sections)}</div>
+  <script>{GATE_JS}</script>
   <script>{TOGGLE_JS}</script>
 </body>
 </html>"""
@@ -458,18 +514,18 @@ def write_pages(events):
         # --- Ohjelma (programme, no speakers) ---
         prog_rows = []
         for e in evs:
-            bg = color_of.get(e.get("start_time", ""), "#fff")
+            tint, acc = color_of.get(e.get("start_time", ""), ("#fff", "inherit"))
             link = (
                 f'<a href="{esc(e.get("url"))}" target="_blank" rel="noopener">'
                 f"{esc(e.get('title'))}</a>"
             )
             prog_rows.append(
-                f'<tr style="background:{bg}">'
-                f'<td class="t">{esc(e.get("start_time"))}</td>'
-                f'<td class="t">{esc(e.get("time_range"))}</td>'
-                f'<td class="title">{link}</td>'
-                f"<td>{esc(e.get('stage'))}</td>"
-                f"<td>{esc(e.get('organizer') or '—')}</td>"
+                f'<tr style="background:{tint}">'
+                f'<td class="t" data-label="Aika" style="color:{acc}">{esc(e.get("start_time"))}</td>'
+                f'<td class="t rng" data-label="Aika-väli">{esc(e.get("time_range"))}</td>'
+                f'<td class="title" data-label="Tapahtuma">{link}</td>'
+                f'<td data-label="Lava">{esc(e.get("stage"))}</td>'
+                f'<td data-label="Järjestäjä">{esc(e.get("organizer") or "–")}</td>'
                 f"</tr>"
             )
         ohjelma_sections.append(f"""
@@ -481,23 +537,22 @@ def write_pages(events):
   </table>
 </section>""")
 
-        # --- Puhujat (speakers, with date column) ---
+        # --- Puhujat (speakers; date lives in the sticky day banner) ---
         spk_rows = []
         for e in evs:
-            bg = color_of.get(e.get("start_time", ""), "#fff")
+            tint, acc = color_of.get(e.get("start_time", ""), ("#fff", "inherit"))
             spk_rows.append(
-                f'<tr style="background:{bg}">'
-                f'<td class="t">{esc(e.get("date"))}</td>'
-                f'<td class="t">{esc(e.get("start_time"))}</td>'
-                f'<td class="title">{esc(e.get("title"))}</td>'
-                f"<td>{speakers_text(e.get('speakers'))}</td>"
+                f'<tr style="background:{tint}">'
+                f'<td class="t" data-label="Aika" style="color:{acc}">{esc(e.get("start_time"))}</td>'
+                f'<td class="title" data-label="Tapahtuma">{esc(e.get("title"))}</td>'
+                f'<td data-label="Puhujat">{speakers_text(e.get("speakers"))}</td>'
                 f"</tr>"
             )
         puhujat_sections.append(f"""
 <section>
   {banner}
   <table class="spk">
-    <thead><tr><th>Pvm</th><th>Aika</th><th>Tapahtuma</th><th>Puhujat</th></tr></thead>
+    <thead><tr><th>Aika</th><th>Tapahtuma</th><th>Puhujat</th></tr></thead>
     <tbody>{"".join(spk_rows)}</tbody>
   </table>
 </section>""")
