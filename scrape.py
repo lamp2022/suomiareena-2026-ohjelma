@@ -468,14 +468,16 @@ PAGE_CSS = """
   .daysub .cnt { font-weight:400; opacity:.7; }
   .vlava th { position:static; }
   .spk-inline { display:block; color:var(--muted); font-size:12.5px; font-weight:400; margin-top:2px; }
-  /* now / next badges, computed client-side from the device clock */
+  /* now / next markers (device clock). Badge lives in the title cell so the
+     fixed-width time column stays aligned across every table. */
   .vlava tr.now { outline:2px solid #1d9a5a; outline-offset:-2px; }
-  .vlava tr.now td.t::after { content:"NYT"; display:inline-block; margin-left:7px; vertical-align:1px;
-        background:#1d9a5a; color:#fff; font-size:10px; font-weight:800; letter-spacing:.04em;
-        padding:1px 6px; border-radius:999px; }
-  .vlava tr.next td.t::after { content:"SEURAAVAKSI"; display:inline-block; margin-left:7px; vertical-align:1px;
-        background:#c62f2f; color:#fff; font-size:10px; font-weight:800; letter-spacing:.04em;
-        padding:1px 6px; border-radius:999px; }
+  .vlava tr.now td.title::after, .vlava tr.next td.title::after {
+        display:inline-block; margin-left:8px; vertical-align:1px; color:#fff;
+        font-size:9.5px; font-weight:800; letter-spacing:.04em; border-radius:999px; white-space:nowrap; }
+  .vlava tr.now td.title::after { content:"NYT"; background:#1d9a5a
+        url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Ccircle%20cx='8'%20cy='8'%20r='6.3'%20fill='none'%20stroke='%23fff'%20stroke-width='1.7'/%3E%3Cpath%20d='M8%204.6V8l2.3%201.5'%20stroke='%23fff'%20stroke-width='1.7'%20fill='none'%20stroke-linecap='round'/%3E%3C/svg%3E")
+        no-repeat 5px center; padding:1px 7px 1px 17px; }
+  .vlava tr.next td.title::after { content:"Seuraava"; background:#c62f2f; padding:1px 7px; }
 
   /* --- speaker links + lookup panel (Puhujat) --- */
   a.spk { color:var(--link); text-decoration:none; font-weight:600; cursor:pointer; }
@@ -497,6 +499,18 @@ PAGE_CSS = """
   #spk-sugg { margin-top:8px; display:flex; flex-wrap:wrap; gap:6px; }
   #spk-sugg button { font-size:13px; padding:5px 11px; border:1px solid var(--line);
                      border-radius:999px; background:#fff; color:var(--ink); cursor:pointer; }
+
+  /* back-to-top button (appears after scrolling) */
+  #totop { position:fixed; right:14px; bottom:14px; z-index:20; width:44px; height:44px;
+           border:0; border-radius:50%; background:var(--ink); color:#fff; font-size:23px; line-height:1;
+           cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,.28); opacity:.92; }
+  #totop[hidden] { display:none; }
+
+  /* desktop: lock the Lavat time column so every table lines up */
+  @media (min-width:641px) {
+    .vlava { table-layout:fixed; }
+    .vlava th:first-child, .vlava td.t { width:74px; }
+  }
   /* phones: each row becomes a self-contained block — no sideways scroll outdoors.
      thead is hidden, every cell carries its own label, group tint stays as the wash. */
   @media (max-width:640px) {
@@ -576,6 +590,15 @@ VIEW_JS = """
   }
   setInterval(markNow, 60000);
 
+  /* --- back to top --- */
+  const totop = document.getElementById('totop');
+  if (totop) {
+    const onScroll = () => { totop.hidden = (window.scrollY < 400); };
+    window.addEventListener('scroll', onScroll, {passive:true});
+    totop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+    onScroll();
+  }
+
   /* --- Puhujat speaker lookup (SPK = {name: [[day,time,venue,title,url],...]}) --- */
   const SPK = window.SPK || {};
   const NAMES = Object.keys(SPK).sort((a,b)=>a.localeCompare(b,'fi'));
@@ -653,6 +676,7 @@ def _page(subtitle, ohjelma_sections, puhujat_sections, lavat_html, spk_json):
     {"".join(puhujat_sections)}
   </div>
   <div id="view-lavat" class="view" hidden>{lavat_html}</div>
+  <button id="totop" aria-label="Takaisin ylös" hidden>&#8593;</button>
   <script>window.SPK={spk_json};</script>
   <script>{VIEW_JS}</script>
 </body>
