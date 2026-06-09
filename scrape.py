@@ -459,12 +459,13 @@ PAGE_CSS = """
   nav.vchips { display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 16px; }
   nav.vchips a { font-size:12.5px; font-weight:600; text-decoration:none; color:var(--ink);
                  padding:5px 11px; border:1px solid var(--ink); border-radius:999px; background:#fff; }
-  .venue-hd { position:sticky; top:0; z-index:6; background:#c62f2f; color:#fff;
-              padding:9px 13px; font-size:17px; font-weight:800; letter-spacing:.01em;
-              box-shadow:0 1px 0 rgba(0,0,0,.18); scroll-margin-top:0; }
+  .venue-hd { position:sticky; top:0; z-index:6; height:40px; display:flex; align-items:center; gap:9px;
+              background:#c62f2f; color:#fff; padding:0 13px; font-size:17px; font-weight:800;
+              letter-spacing:.01em; box-shadow:0 1px 0 rgba(0,0,0,.18); }
   .venue-hd .cnt { font-size:12px; font-weight:400; opacity:.85; }
-  .daysub { background:var(--th); color:#fff; padding:4px 13px; font-size:12px; font-weight:700;
-            letter-spacing:.03em; }
+  /* day label sticks just under the venue header so the date stays visible while scrolling */
+  .daysub { position:sticky; top:40px; z-index:5; background:var(--th); color:#fff; padding:5px 13px;
+            font-size:12px; font-weight:700; letter-spacing:.03em; }
   .daysub .cnt { font-weight:400; opacity:.7; }
   .vlava th { position:static; }
   .spk-inline { display:block; color:var(--muted); font-size:12.5px; font-weight:400; margin-top:2px; }
