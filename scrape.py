@@ -291,10 +291,44 @@ def _time_key(t):
     return (int(m.group(1)), int(m.group(2))) if m else (99, 99)
 
 
+THEME_DAYS_JSON = os.path.join(HERE, "theme_days.json")
+
+
+def merge_theme_days(events):
+    """Fold in per-slot theme-day programmes from theme_days.json (see
+    parse_theme_days.py). Official ohjelma takes precedence: a slot already
+    present (same date+start_time+stage) is only enriched when it has no
+    speakers; otherwise the slot is appended. Umbrella placeholder rows the
+    articles supersede are dropped. Self-reconciling, so a later official
+    refresh that adds these slots will not duplicate them."""
+    if not os.path.exists(THEME_DAYS_JSON):
+        return events
+    data = json.load(open(THEME_DAYS_JSON))
+    superseded = set(data.get("superseded_titles", []))
+    events = [e for e in events if e.get("title") not in superseded]
+
+    def k(e):
+        return (e.get("date"), e.get("start_time"), e.get("stage"))
+
+    by_slot = {}
+    for e in events:
+        by_slot.setdefault(k(e), e)  # first wins; official rows already present
+    for slot in data.get("events", []):
+        existing = by_slot.get(k(slot))
+        if existing is None:
+            events.append(slot)
+            by_slot[k(slot)] = slot
+        elif len(slot.get("speakers") or []) > len(existing.get("speakers") or []):
+            # article is the canonical programme for these slots: take its fuller
+            # speaker list when the official row is empty or thinner.
+            existing["speakers"] = slot["speakers"]
+    return events
+
+
 def assemble():
     done = load_done()
-    events = sorted(
-        done.values(),
+    events = merge_theme_days(list(done.values()))
+    events.sort(
         key=lambda e: (
             e.get("date", ""),
             _time_key(e.get("start_time", "")),
