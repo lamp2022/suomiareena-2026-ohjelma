@@ -23,11 +23,7 @@ import sys
 import time
 import html
 import random
-import base64
 import urllib.request
-from cryptography.hazmat.primitives import hashes
-from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
-from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 LIST_HTML = os.path.join(HERE, "ohjelma_raw.html")
@@ -415,137 +411,35 @@ PAGE_CSS = """
 """
 
 
-# Real client-side encryption (no server). The event markup is AES-256-GCM
-# encrypted at build time with a key derived from the password via PBKDF2; the
-# page ships only ciphertext. The password is NEVER stored in source — it is the
-# decryption key, supplied at build time through the SA_GATE_PW env var and typed
-# by the visitor at runtime. Brute-forceable offline, so use a non-trivial password.
-PBKDF2_ITERS = 200_000
-PASSWORD = os.environ.get("SA_GATE_PW", "")
-
-
-def encrypt_payload(plaintext, password):
-    """salt(16) | iv(12) | ciphertext+tag  ->  base64. Matches WebCrypto AES-GCM."""
-    salt = os.urandom(16)
-    kdf = PBKDF2HMAC(
-        algorithm=hashes.SHA256(), length=32, salt=salt, iterations=PBKDF2_ITERS
-    )
-    key = kdf.derive(password.encode("utf-8"))
-    iv = os.urandom(12)
-    ct = AESGCM(key).encrypt(iv, plaintext.encode("utf-8"), None)
-    return base64.b64encode(salt + iv + ct).decode("ascii")
-
-
-# Runs after the views are injected: wires the Ohjelma/Puhujat tabs + hash routing.
+# Public page, no gate — this is open programme data. Wires the Ohjelma/Puhujat
+# tabs + #ohjelma/#puhujat hash routing on load.
 VIEW_JS = """
-  function initViews() {
-    const views = { ohjelma: document.getElementById('view-ohjelma'),
-                    puhujat: document.getElementById('view-puhujat') };
-    const tabs = document.querySelectorAll('nav.tabs a');
-    function show(view) {
-      if (!views[view]) view = 'ohjelma';
-      for (const k in views) views[k].hidden = (k !== view);
-      tabs.forEach(t => t.classList.toggle('active', t.dataset.view === view));
-      document.title = (view === 'puhujat' ? 'SuomiAreena 2026 – Puhujat'
-                                           : 'SuomiAreena 2026 – Ohjelma');
-    }
-    function fromHash() { show((location.hash || '#ohjelma').slice(1)); }
-    window.addEventListener('hashchange', fromHash);
-    fromHash();
+  const views = { ohjelma: document.getElementById('view-ohjelma'),
+                  puhujat: document.getElementById('view-puhujat') };
+  const tabs = document.querySelectorAll('nav.tabs a');
+  function show(view) {
+    if (!views[view]) view = 'ohjelma';
+    for (const k in views) views[k].hidden = (k !== view);
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.view === view));
+    document.title = (view === 'puhujat' ? 'SuomiAreena 2026 – Puhujat'
+                                         : 'SuomiAreena 2026 – Ohjelma');
   }
-"""
-
-GATE_CSS = """
-  #gate { position:fixed; inset:0; z-index:1000; background:#1a1a1a; color:#fff;
-          display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px;
-          font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; padding:24px; }
-  #gate h2 { margin:0; font-size:20px; font-weight:700; }
-  #gate input { font-size:16px; padding:11px 14px; border:1px solid #555; border-radius:8px;
-                background:#222; color:#fff; width:min(320px,90vw); }
-  #gate button { font-size:15px; font-weight:600; padding:10px 22px; border:0; border-radius:999px;
-                 background:#fff; color:#1a1a1a; cursor:pointer; }
-  #gate button[disabled] { opacity:.6; cursor:progress; }
-  #gate label { font-size:14px; display:flex; align-items:center; gap:8px; color:#cfcfcf; cursor:pointer; }
-  #gate label input { width:auto; padding:0; }
-  #gate .err { color:#ff8a7a; font-size:14px; min-height:1.2em; }
-  body.locked { overflow:hidden; }
-  body.locked main, body.locked header.top { filter:blur(8px); pointer-events:none; }
-"""
-GATE_HTML = """
-  <div id="gate">
-    <h2>SuomiAreena 2026</h2>
-    <input id="gate-pw" type="password" placeholder="Salasana" autocomplete="current-password" autofocus>
-    <label><input type="checkbox" id="gate-save" checked> Muista tällä laitteella</label>
-    <button id="gate-go">Kirjaudu</button>
-    <div class="err" id="gate-err"></div>
-  </div>"""
-# %s -> base64 blob literal. Derives the key from the typed password, decrypts the
-# event markup into #app, then boots the views. Wrong password => GCM auth fails.
-GATE_JS = """
-  (function(){
-    var BLOB=%s, ITERS=%d, KEY='sa2026_pw';
-    var enc=new TextEncoder(), dec=new TextDecoder();
-    function b64(s){ var b=atob(s), a=new Uint8Array(b.length);
-      for(var i=0;i<b.length;i++) a[i]=b.charCodeAt(i); return a; }
-    function clearStores(){ try{localStorage.removeItem(KEY);}catch(e){} try{sessionStorage.removeItem(KEY);}catch(e){} }
-    function store(pw, persist){ clearStores();
-      try{ (persist?localStorage:sessionStorage).setItem(KEY, pw); }catch(e){} }
-    async function decryptWith(pw){
-      var raw=b64(BLOB), salt=raw.slice(0,16), iv=raw.slice(16,28), data=raw.slice(28);
-      var base=await crypto.subtle.importKey('raw', enc.encode(pw), 'PBKDF2', false, ['deriveKey']);
-      var key=await crypto.subtle.deriveKey(
-        {name:'PBKDF2', salt:salt, iterations:ITERS, hash:'SHA-256'},
-        base, {name:'AES-GCM', length:256}, false, ['decrypt']);
-      var pt=await crypto.subtle.decrypt({name:'AES-GCM', iv:iv}, key, data);
-      return dec.decode(pt);
-    }
-    function boot(htmlStr){
-      document.getElementById('app').innerHTML=htmlStr;
-      var g=document.getElementById('gate'); if(g) g.remove();
-      document.body.classList.remove('locked');
-      initViews();
-    }
-    // opts: {fromStore:true} = silent retry of a remembered password (no re-store);
-    //       {persist:bool}   = user-submitted, remember in local- or sessionStorage.
-    async function tryPw(pw, opts){
-      var html;
-      try { html=await decryptWith(pw); }
-      catch(e){
-        if(opts.fromStore){ clearStores(); return false; }
-        document.getElementById('gate-err').textContent='Väärä salasana.';
-        return false;
-      }
-      if(opts.persist!==undefined) store(pw, opts.persist);
-      boot(html); return true;
-    }
-    document.body.classList.add('locked');
-    var saved=null;
-    try{ saved=localStorage.getItem(KEY)||sessionStorage.getItem(KEY); }catch(e){}
-    if(saved){ tryPw(saved, {fromStore:true}); return; }
-    function submit(){
-      var btn=document.getElementById('gate-go'), inp=document.getElementById('gate-pw');
-      var persist=document.getElementById('gate-save').checked;
-      btn.disabled=true; document.getElementById('gate-err').textContent='';
-      tryPw(inp.value, {persist:persist}).finally(function(){ btn.disabled=false; });
-    }
-    document.getElementById('gate-go').addEventListener('click', submit);
-    document.getElementById('gate-pw').addEventListener('keydown', function(e){ if(e.key==='Enter') submit(); });
-  })();
+  function fromHash() { show((location.hash || '#ohjelma').slice(1)); }
+  window.addEventListener('hashchange', fromHash);
+  fromHash();
 """
 
 
-def _page(subtitle, blob):
-    gate_js = GATE_JS % ('"' + blob + '"', PBKDF2_ITERS)
+def _page(subtitle, ohjelma_sections, puhujat_sections):
     return f"""<!DOCTYPE html>
 <html lang="fi">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SuomiAreena 2026 – Ohjelma</title>
-<style>{PAGE_CSS}{GATE_CSS}</style>
+<style>{PAGE_CSS}</style>
 </head>
-<body class="locked">
-  {GATE_HTML}
+<body>
   <header class="top">
     <h1>SuomiAreena 2026</h1>
     <p class="sub">{esc(subtitle)}</p>
@@ -554,9 +448,9 @@ def _page(subtitle, blob):
       <a href="#puhujat" data-view="puhujat">Puhujat</a>
     </nav>
   </header>
-  <main id="app"></main>
+  <div id="view-ohjelma" class="view">{"".join(ohjelma_sections)}</div>
+  <div id="view-puhujat" class="view" hidden>{"".join(puhujat_sections)}</div>
   <script>{VIEW_JS}</script>
-  <script>{gate_js}</script>
 </body>
 </html>"""
 
@@ -626,18 +520,7 @@ def write_pages(events):
     total = len(events)
     sub = f"{total} tapahtumaa · 23.–26.6.2026 · Pori · värit ryhmittelevät tapahtumat alkamisajan mukaan · lähde: suomiareena.fi"
 
-    if not PASSWORD:
-        raise SystemExit(
-            "SA_GATE_PW env var not set — needed to encrypt the page.\n"
-            "Run:  SA_GATE_PW='yourpassword' python3 scrape.py --build"
-        )
-    payload = (
-        f'<div id="view-ohjelma" class="view">{"".join(ohjelma_sections)}</div>'
-        f'<div id="view-puhujat" class="view" hidden>{"".join(puhujat_sections)}</div>'
-    )
-    blob = encrypt_payload(payload, PASSWORD)
-
-    page = _page(sub, blob)
+    page = _page(sub, ohjelma_sections, puhujat_sections)
     with open(INDEX_HTML, "w") as f:
         f.write(page)
     # keep the old direct URLs alive as redirects into the single page's views
