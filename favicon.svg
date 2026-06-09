@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- flagpole + pennant -->
+  <line x1="16" y1="3" x2="16" y2="7.5" stroke="#243b6b" stroke-width="1.5"/>
+  <path d="M16 2.6 L21.5 4.4 L16 6.2 Z" fill="#e23b3b"/>
+  <!-- big-top roof -->
+  <path d="M16 7 C9 8 4 12 2.5 16.5 L29.5 16.5 C28 12 23 8 16 7 Z" fill="#e23b3b"/>
+  <!-- tent body -->
+  <path d="M4 16.5 H28 V27 H4 Z" fill="#fff"/>
+  <!-- red stripes -->
+  <g fill="#e23b3b">
+    <rect x="4" y="16.5" width="3.4" height="10.5"/>
+    <rect x="10.8" y="16.5" width="3.4" height="10.5"/>
+    <rect x="17.6" y="16.5" width="3.4" height="10.5"/>
+    <rect x="24.4" y="16.5" width="3.6" height="10.5"/>
+  </g>
+  <!-- entrance -->
+  <path d="M13 27 V20.5 A3 3 0 0 1 19 20.5 V27 Z" fill="#243b6b"/>
+  <!-- ground line -->
+  <rect x="3" y="26.6" width="26" height="1.8" rx="0.9" fill="#243b6b"/>
+</svg>
