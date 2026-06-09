@@ -365,14 +365,47 @@ def speakers_text(speakers):
         return '<span class="tbd">ei vielä tiedossa</span>'
     parts = []
     for s in speakers:
+        name = esc(s.get("name", ""))
+        link = f'<a class="spk" data-spk="{name}">{name}</a>'
         meta = ", ".join(
             x for x in (s.get("role"), s.get("title"), s.get("organization")) if x
         )
         if meta:
-            parts.append(f'{esc(s["name"])} <span class="meta">({esc(meta)})</span>')
+            parts.append(f'{link} <span class="meta">({esc(meta)})</span>')
         else:
-            parts.append(esc(s["name"]))
+            parts.append(link)
     return "<br>".join(parts)
+
+
+def speaker_names(speakers):
+    """Compact comma-joined tappable names for the Lavat board."""
+    out = []
+    for s in speakers or []:
+        n = esc(s.get("name", ""))
+        if n:
+            out.append(f'<a class="spk" data-spk="{n}">{n}</a>')
+    return ", ".join(out)
+
+
+def _slug(s):
+    s = (s or "").lower()
+    s = s.replace("ä", "a").replace("ö", "o").replace("å", "a")
+    s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+    return s or "x"
+
+
+def _iso(date, hm):
+    """'23.6.2026' + '10.00' -> '2026-06-23T10:00' (local), for client now/next."""
+    d = re.match(r"(\d{1,2})\.(\d{1,2})\.(\d{4})", date or "")
+    t = re.match(r"(\d{1,2})\.(\d{2})", hm or "")
+    if not (d and t):
+        return ""
+    return f"{int(d.group(3)):04d}-{int(d.group(2)):02d}-{int(d.group(1)):02d}T{int(t.group(1)):02d}:{t.group(2)}"
+
+
+def _end_hm(time_range):
+    parts = re.split(r"[–-]", time_range or "")
+    return parts[1].strip() if len(parts) > 1 else ""
 
 
 def _color_map(evs):
@@ -421,6 +454,49 @@ PAGE_CSS = """
   .tbd { color:oklch(0.52 0.18 25); font-style:italic; }
   .prog td.title, .spk td.title { font-weight:600; }
   .view[hidden] { display:none; }
+
+  /* --- Lavat (per-venue) view --- */
+  nav.vchips { display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 16px; }
+  nav.vchips a { font-size:12.5px; font-weight:600; text-decoration:none; color:var(--ink);
+                 padding:5px 11px; border:1px solid var(--ink); border-radius:999px; background:#fff; }
+  .venue-hd { position:sticky; top:0; z-index:6; background:#c62f2f; color:#fff;
+              padding:9px 13px; font-size:17px; font-weight:800; letter-spacing:.01em;
+              box-shadow:0 1px 0 rgba(0,0,0,.18); scroll-margin-top:0; }
+  .venue-hd .cnt { font-size:12px; font-weight:400; opacity:.85; }
+  .daysub { background:var(--th); color:#fff; padding:4px 13px; font-size:12px; font-weight:700;
+            letter-spacing:.03em; }
+  .daysub .cnt { font-weight:400; opacity:.7; }
+  .vlava th { position:static; }
+  .spk-inline { display:block; color:var(--muted); font-size:12.5px; font-weight:400; margin-top:2px; }
+  /* now / next badges, computed client-side from the device clock */
+  .vlava tr.now { outline:2px solid #1d9a5a; outline-offset:-2px; }
+  .vlava tr.now td.t::after { content:"NYT"; display:inline-block; margin-left:7px; vertical-align:1px;
+        background:#1d9a5a; color:#fff; font-size:10px; font-weight:800; letter-spacing:.04em;
+        padding:1px 6px; border-radius:999px; }
+  .vlava tr.next td.t::after { content:"SEURAAVAKSI"; display:inline-block; margin-left:7px; vertical-align:1px;
+        background:#c62f2f; color:#fff; font-size:10px; font-weight:800; letter-spacing:.04em;
+        padding:1px 6px; border-radius:999px; }
+
+  /* --- speaker links + lookup panel (Puhujat) --- */
+  a.spk { color:var(--link); text-decoration:none; font-weight:600; cursor:pointer; }
+  a.spk:hover { text-decoration:underline; }
+  .spk-tools { position:sticky; top:0; z-index:6; background:var(--bg); padding:10px 0 8px;
+               border-bottom:1px solid var(--line); margin-bottom:8px; }
+  #spk-search { width:100%; font-size:16px; padding:10px 13px; border:1px solid var(--ink);
+                border-radius:10px; background:#fff; color:var(--ink); }
+  #spk-result:not(:empty) { margin-top:10px; background:#fff; border:1px solid var(--line);
+                            border-radius:10px; padding:12px 14px; }
+  #spk-result h3 { margin:0 0 8px; font-size:16px; }
+  #spk-result .close { float:right; cursor:pointer; color:var(--muted); font-weight:700;
+                       border:0; background:none; font-size:18px; line-height:1; padding:0 2px; }
+  #spk-result ul { margin:0; padding:0; list-style:none; }
+  #spk-result li { padding:6px 0; border-top:1px solid var(--line); font-size:14px; }
+  #spk-result li:first-child { border-top:0; }
+  #spk-result .slot-t { font-weight:700; font-variant-numeric:tabular-nums; }
+  #spk-result .slot-v { color:var(--muted); }
+  #spk-sugg { margin-top:8px; display:flex; flex-wrap:wrap; gap:6px; }
+  #spk-sugg button { font-size:13px; padding:5px 11px; border:1px solid var(--line);
+                     border-radius:999px; background:#fff; color:var(--ink); cursor:pointer; }
   /* phones: each row becomes a self-contained block — no sideways scroll outdoors.
      thead is hidden, every cell carries its own label, group tint stays as the wash. */
   @media (max-width:640px) {
@@ -445,26 +521,102 @@ PAGE_CSS = """
 """
 
 
-# Public page, no gate — this is open programme data. Wires the Ohjelma/Puhujat
-# tabs + #ohjelma/#puhujat hash routing on load.
+# Public page, no gate — this is open programme data.
+# - tabs Ohjelma/Puhujat/Lavat via #hash routing
+# - Lavat: NYT/SEURAAVAKSI marked from the device clock, auto-scroll to now on open
+# - Puhujat: tap a speaker (or search) -> inline panel of all their slots (SPK index)
 VIEW_JS = """
   const views = { ohjelma: document.getElementById('view-ohjelma'),
-                  puhujat: document.getElementById('view-puhujat') };
+                  puhujat: document.getElementById('view-puhujat'),
+                  lavat:   document.getElementById('view-lavat') };
+  const TITLES = { ohjelma:'SuomiAreena 2026 – Ohjelma',
+                   puhujat:'SuomiAreena 2026 – Puhujat',
+                   lavat:'SuomiAreena 2026 – Lavat' };
   const tabs = document.querySelectorAll('nav.tabs a');
+  let lavatSeen = false;
   function show(view) {
     if (!views[view]) view = 'ohjelma';
     for (const k in views) views[k].hidden = (k !== view);
     tabs.forEach(t => t.classList.toggle('active', t.dataset.view === view));
-    document.title = (view === 'puhujat' ? 'SuomiAreena 2026 – Puhujat'
-                                         : 'SuomiAreena 2026 – Ohjelma');
+    document.title = TITLES[view] || TITLES.ohjelma;
+    if (view === 'lavat') { markNow(); scrollToNow(!lavatSeen); lavatSeen = true; }
   }
   function fromHash() { show((location.hash || '#ohjelma').slice(1)); }
   window.addEventListener('hashchange', fromHash);
+
+  /* --- Lavat now/next (device clock; exact on-site in Finnish time) --- */
+  function markNow() {
+    const now = new Date();
+    document.querySelectorAll('#view-lavat .venue').forEach(function(v) {
+      let live = null, next = null;
+      v.querySelectorAll('tr[data-s]').forEach(function(r) {
+        r.classList.remove('now','next');
+        const s = new Date(r.dataset.s);
+        const e = r.dataset.e ? new Date(r.dataset.e) : new Date(s.getTime()+45*60000);
+        if (now >= s && now < e) live = r;
+        else if (now < s && !next) next = r;
+      });
+      if (live) live.classList.add('now');
+      if (next) next.classList.add('next');
+    });
+  }
+  function scrollToNow(doScroll) {
+    if (!doScroll) return;
+    const t = document.querySelector('#view-lavat tr.now') ||
+              document.querySelector('#view-lavat tr.next');
+    if (t) t.scrollIntoView({block:'center'});
+  }
+  setInterval(markNow, 60000);
+
+  /* --- Puhujat speaker lookup (SPK = {name: [[day,time,venue,title,url],...]}) --- */
+  const SPK = window.SPK || {};
+  const NAMES = Object.keys(SPK).sort((a,b)=>a.localeCompare(b,'fi'));
+  const sEl = document.getElementById('spk-search');
+  const rEl = document.getElementById('spk-result');
+  function renderSpeaker(name) {
+    const slots = SPK[name];
+    if (!slots) { rEl.innerHTML=''; return; }
+    let h = '<button class="close" aria-label="Sulje">×</button><h3>'+esc(name)+
+            ' <span class="slot-v">('+slots.length+')</span></h3><ul>';
+    slots.forEach(function(x){
+      h += '<li><span class="slot-t">'+esc(x[0])+' '+esc(x[1])+'</span> · '+
+           '<span class="slot-v">'+esc(x[2])+'</span><br>'+
+           '<a href="'+esc(x[4])+'" target="_blank" rel="noopener">'+esc(x[3])+'</a></li>';
+    });
+    rEl.innerHTML = h + '</ul>';
+    rEl.scrollIntoView({block:'nearest'});
+  }
+  function suggest(q) {
+    q = q.trim().toLowerCase();
+    if (q.length < 2) { rEl.innerHTML=''; return; }
+    const exact = NAMES.find(n=>n.toLowerCase()===q);
+    if (exact) { renderSpeaker(exact); return; }
+    const hits = NAMES.filter(n=>n.toLowerCase().includes(q)).slice(0,12);
+    if (!hits.length) { rEl.innerHTML='<span class="slot-v">Ei osumia.</span>'; return; }
+    rEl.innerHTML = '<div id="spk-sugg">'+hits.map(function(n){
+      return '<button data-spk="'+esc(n)+'">'+esc(n)+' ('+SPK[n].length+')</button>';
+    }).join('')+'</div>';
+  }
+  function esc(s){ return String(s).replace(/[&<>\"']/g, function(c){
+    return ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'})[c]; }); }
+  if (sEl) sEl.addEventListener('input', function(){ suggest(sEl.value); });
+  document.addEventListener('click', function(ev){
+    const a = ev.target.closest('a.spk, #spk-sugg button');
+    if (a && a.dataset.spk) {
+      ev.preventDefault();
+      location.hash = '#puhujat';
+      if (sEl) sEl.value = a.dataset.spk;
+      renderSpeaker(a.dataset.spk);
+      return;
+    }
+    if (ev.target.closest('#spk-result .close')) { rEl.innerHTML=''; if (sEl) sEl.value=''; }
+  });
+
   fromHash();
 """
 
 
-def _page(subtitle, ohjelma_sections, puhujat_sections):
+def _page(subtitle, ohjelma_sections, puhujat_sections, lavat_html, spk_json):
     return f"""<!DOCTYPE html>
 <html lang="fi">
 <head>
@@ -481,10 +633,19 @@ def _page(subtitle, ohjelma_sections, puhujat_sections):
     <nav class="tabs">
       <a href="#ohjelma" data-view="ohjelma" class="active">Ohjelma</a>
       <a href="#puhujat" data-view="puhujat">Puhujat</a>
+      <a href="#lavat" data-view="lavat">Lavat</a>
     </nav>
   </header>
   <div id="view-ohjelma" class="view">{"".join(ohjelma_sections)}</div>
-  <div id="view-puhujat" class="view" hidden>{"".join(puhujat_sections)}</div>
+  <div id="view-puhujat" class="view" hidden>
+    <div class="spk-tools">
+      <input id="spk-search" type="search" placeholder="Etsi puhuja…" autocomplete="off">
+      <div id="spk-result"></div>
+    </div>
+    {"".join(puhujat_sections)}
+  </div>
+  <div id="view-lavat" class="view" hidden>{lavat_html}</div>
+  <script>window.SPK={spk_json};</script>
   <script>{VIEW_JS}</script>
 </body>
 </html>"""
@@ -496,11 +657,13 @@ def write_pages(events):
         by_day.setdefault(e.get("date", ""), []).append(e)
 
     ohjelma_sections, puhujat_sections = [], []
+    day_color = {}
     for date in DAY_NAMES:
         evs = by_day.get(date, [])
         if not evs:
             continue
         color_of = _color_map(evs)
+        day_color[date] = color_of
         banner = (
             f'<div class="day">{esc(DAY_NAMES[date])} '
             f'<span class="cnt">{esc(date)} · {len(evs)} tapahtumaa</span></div>'
@@ -552,10 +715,78 @@ def write_pages(events):
   </table>
 </section>""")
 
+    # --- Lavat (per-venue programme; NYT/SEURAAVAKSI added client-side) ---
+    by_venue = {}
+    for e in events:
+        by_venue.setdefault(e.get("stage") or "Muu", []).append(e)
+    venues = sorted(by_venue, key=lambda v: (-len(by_venue[v]), v))
+
+    chips = "".join(f'<a href="#lava-{_slug(v)}">{esc(v)}</a>' for v in venues)
+    lavat_parts = [f'<nav class="vchips">{chips}</nav>']
+    for v in venues:
+        vevents = by_venue[v]
+        vbar = (
+            f'<div class="venue-hd" id="lava-{_slug(v)}">{esc(v)} '
+            f'<span class="cnt">{len(vevents)} tapahtumaa</span></div>'
+        )
+        blocks = [vbar]
+        vby_day = {}
+        for e in vevents:
+            vby_day.setdefault(e.get("date", ""), []).append(e)
+        for date in DAY_NAMES:
+            dv = vby_day.get(date, [])
+            if not dv:
+                continue
+            color_of = day_color.get(date, {})
+            daysub = (
+                f'<div class="daysub">{esc(DAY_NAMES[date])} '
+                f'<span class="cnt">{esc(date)}</span></div>'
+            )
+            rows = []
+            for e in dv:
+                tint, acc = color_of.get(e.get("start_time", ""), ("#fff", "inherit"))
+                s_iso = _iso(date, e.get("start_time", ""))
+                e_iso = _iso(date, _end_hm(e.get("time_range", "")))
+                names = speaker_names(e.get("speakers"))
+                sub_line = f'<span class="spk-inline">{names}</span>' if names else ""
+                link = (
+                    f'<a href="{esc(e.get("url"))}" target="_blank" rel="noopener">'
+                    f"{esc(e.get('title'))}</a>"
+                )
+                rows.append(
+                    f'<tr style="background:{tint}" data-s="{s_iso}" data-e="{e_iso}">'
+                    f'<td class="t" data-label="Aika" style="color:{acc}">{esc(e.get("start_time"))}</td>'
+                    f'<td class="title" data-label="Tapahtuma">{link}{sub_line}</td>'
+                    f"</tr>"
+                )
+            blocks.append(
+                daysub
+                + f'<table class="prog vlava"><thead><tr><th>Aika</th><th>Tapahtuma</th></tr></thead>'
+                + f"<tbody>{''.join(rows)}</tbody></table>"
+            )
+        lavat_parts.append(f'<section class="venue">{"".join(blocks)}</section>')
+    lavat_html = "".join(lavat_parts)
+
+    # --- speaker index: name -> [[dayname, time, venue, title, url], ...] ---
+    spk_index = {}
+    for e in events:
+        ref = [
+            DAY_NAMES.get(e.get("date", ""), e.get("date", "")),
+            e.get("start_time", ""),
+            e.get("stage", ""),
+            e.get("title", ""),
+            e.get("url", ""),
+        ]
+        for s in e.get("speakers") or []:
+            name = re.sub(r"\s+", " ", s.get("name", "")).strip()
+            if name:
+                spk_index.setdefault(name, []).append(ref)
+    spk_json = json.dumps(spk_index, ensure_ascii=False).replace("</", "<\\/")
+
     total = len(events)
     sub = f"{total} tapahtumaa · 23.–26.6.2026 · Pori · värit ryhmittelevät tapahtumat alkamisajan mukaan · lähde: suomiareena.fi"
 
-    page = _page(sub, ohjelma_sections, puhujat_sections)
+    page = _page(sub, ohjelma_sections, puhujat_sections, lavat_html, spk_json)
     with open(INDEX_HTML, "w") as f:
         f.write(page)
     # keep the old direct URLs alive as redirects into the single page's views
