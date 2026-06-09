@@ -541,7 +541,15 @@ VIEW_JS = """
     document.title = TITLES[view] || TITLES.ohjelma;
     if (view === 'lavat') { markNow(); scrollToNow(!lavatSeen); lavatSeen = true; }
   }
-  function fromHash() { show((location.hash || '#ohjelma').slice(1)); }
+  function fromHash() {
+    const h = (location.hash || '#ohjelma').slice(1);
+    if (views[h]) { show(h); return; }          // a real view tab
+    if (h.indexOf('lava-') === 0) {             // a venue jump-chip anchor
+      show('lavat');                            // stay on Lavat, scroll to that venue
+      const el = document.getElementById(h);
+      if (el) el.scrollIntoView();
+    }
+  }
   window.addEventListener('hashchange', fromHash);
 
   /* --- Lavat now/next (device clock; exact on-site in Finnish time) --- */
