@@ -2,3 +2,17 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# Sensitive people-research scratch — lives in the private suomiareena-people repo, never here
+images/
+img_shards/
+finance_*
+finance-report.html
+image_*.json
+images-test.html
+images_*.json
+build_finance_report.py
+build_image_test.py
+download_faces.py
+research_shards/
+prompts/
