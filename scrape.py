@@ -483,6 +483,7 @@ PAGE_CSS = """
   /* --- speaker links + lookup panel (Puhujat) --- */
   a.spk { color:var(--link); text-decoration:none; font-weight:600; cursor:pointer; }
   a.spk:hover { text-decoration:underline; }
+  #view-puhujat.filtered .day .cnt { display:none; }  /* count is stale while filtering */
   .spk-tools { position:sticky; top:0; z-index:6; background:var(--bg); padding:10px 0 8px;
                border-bottom:1px solid var(--line); margin-bottom:8px; }
   #spk-search { width:100%; font-size:16px; padding:10px 13px; border:1px solid var(--ink);
@@ -600,48 +601,66 @@ VIEW_JS = """
     onScroll();
   }
 
-  /* --- Puhujat speaker lookup (SPK = {name: [[day,time,venue,title,url],...]}) --- */
+  /* --- Puhujat search: name picker (pills w/ event counts) + row filter --- */
   const SPK = window.SPK || {};
-  const NAMES = Object.keys(SPK).sort((a,b)=>a.localeCompare(b,'fi'));
+  const NAMES = Object.keys(SPK).sort(function(a,b){ return a.localeCompare(b,'fi'); });
+  const pView = document.getElementById('view-puhujat');
   const sEl = document.getElementById('spk-search');
   const rEl = document.getElementById('spk-result');
-  function renderSpeaker(name) {
-    const slots = SPK[name];
-    if (!slots) { rEl.innerHTML=''; return; }
-    let h = '<button class="close" aria-label="Sulje">×</button><h3>'+esc(name)+
-            ' <span class="slot-v">('+slots.length+')</span></h3><ul>';
-    slots.forEach(function(x){
-      h += '<li><span class="slot-t">'+esc(x[0])+' '+esc(x[1])+'</span> · '+
-           '<span class="slot-v">'+esc(x[2])+'</span><br>'+
-           '<a href="'+esc(x[4])+'" target="_blank" rel="noopener">'+esc(x[3])+'</a></li>';
-    });
-    rEl.innerHTML = h + '</ul>';
-    rEl.scrollIntoView({block:'nearest'});
-  }
-  function suggest(q) {
-    q = q.trim().toLowerCase();
-    if (q.length < 2) { rEl.innerHTML=''; return; }
-    const exact = NAMES.find(n=>n.toLowerCase()===q);
-    if (exact) { renderSpeaker(exact); return; }
-    const hits = NAMES.filter(n=>n.toLowerCase().includes(q)).slice(0,12);
-    if (!hits.length) { rEl.innerHTML='<span class="slot-v">Ei osumia.</span>'; return; }
-    rEl.innerHTML = '<div id="spk-sugg">'+hits.map(function(n){
-      return '<button data-spk="'+esc(n)+'">'+esc(n)+' ('+SPK[n].length+')</button>';
-    }).join('')+'</div>';
-  }
   function esc(s){ return String(s).replace(/[&<>\"']/g, function(c){
     return ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'})[c]; }); }
-  if (sEl) sEl.addEventListener('input', function(){ suggest(sEl.value); });
+
+  function filterRows(q) {
+    q = q.trim().toLowerCase();
+    const secs = pView ? pView.querySelectorAll('section') : [];
+    if (q.length < 2) {                       // cleared: show everything
+      pView && pView.classList.remove('filtered');
+      secs.forEach(function(sec){
+        sec.hidden = false;
+        sec.querySelectorAll('tbody tr').forEach(function(r){ r.hidden = false; });
+      });
+      return 0;
+    }
+    pView && pView.classList.add('filtered');
+    let total = 0;
+    secs.forEach(function(sec){
+      let vis = 0;
+      sec.querySelectorAll('tbody tr').forEach(function(r){
+        const names = Array.prototype.map.call(
+          r.querySelectorAll('a.spk'), function(a){ return (a.dataset.spk||'').toLowerCase(); });
+        const m = names.some(function(n){ return n.includes(q); });
+        r.hidden = !m;
+        if (m) vis++;
+      });
+      sec.hidden = (vis === 0);
+      total += vis;
+    });
+    return total;
+  }
+
+  /* picker pills: matching speaker names with their event counts */
+  function renderPills(q) {
+    q = q.trim().toLowerCase();
+    if (q.length < 2) { rEl.innerHTML = ''; return; }
+    const exact = NAMES.some(function(n){ return n.toLowerCase() === q; });
+    const hits = NAMES.filter(function(n){ return n.toLowerCase().includes(q); });
+    if (exact || !hits.length) { rEl.innerHTML = ''; return; }   // chosen / no names: just the filter
+    rEl.innerHTML = '<div id="spk-sugg">' + hits.slice(0, 30).map(function(n){
+      return '<button data-spk="'+esc(n)+'">'+esc(n)+' <span class="slot-v">('+SPK[n].length+')</span></button>';
+    }).join('') + '</div>';
+  }
+
+  function search(q) { filterRows(q); renderPills(q); }
+  if (sEl) sEl.addEventListener('input', function(){ search(sEl.value); });
   document.addEventListener('click', function(ev){
-    const a = ev.target.closest('a.spk, #spk-sugg button');
+    const a = ev.target.closest('a.spk, #spk-sugg button');   // name link OR picker pill
     if (a && a.dataset.spk) {
       ev.preventDefault();
       location.hash = '#puhujat';
       if (sEl) sEl.value = a.dataset.spk;
-      renderSpeaker(a.dataset.spk);
-      return;
+      search(a.dataset.spk);                                   // exact name -> rows narrow, pills clear
+      if (sEl) sEl.scrollIntoView({block:'nearest'});
     }
-    if (ev.target.closest('#spk-result .close')) { rEl.innerHTML=''; if (sEl) sEl.value=''; }
   });
 
   fromHash();
@@ -732,10 +751,14 @@ def write_pages(events):
         spk_rows = []
         for e in evs:
             tint, acc = color_of.get(e.get("start_time", ""), ("#fff", "inherit"))
+            link = (
+                f'<a href="{esc(e.get("url"))}" target="_blank" rel="noopener">'
+                f"{esc(e.get('title'))}</a>"
+            )
             spk_rows.append(
                 f'<tr style="background:{tint}">'
                 f'<td class="t" data-label="Aika" style="color:{acc}">{esc(e.get("start_time"))}</td>'
-                f'<td class="title" data-label="Tapahtuma">{esc(e.get("title"))}</td>'
+                f'<td class="title" data-label="Tapahtuma">{link}</td>'
                 f'<td data-label="Puhujat">{speakers_text(e.get("speakers"))}</td>'
                 f"</tr>"
             )

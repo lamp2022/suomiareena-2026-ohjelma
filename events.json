@@ -252,29 +252,36 @@
     "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/suomiareenan-suuri-turvallisuuspaiva/",
+    "post_id": "62669",
+    "url": "https://www.suomiareena.fi/event/sodankaynti-muuttuu-ja-drooneja-tippuu-taivaalta-onko-suomi-todella-valmis/",
     "title": "Sodankäynti muuttuu ja drooneja tippuu taivaalta – onko Suomi todella valmis?",
     "date": "23.6.2026",
     "time_range": "10.00–10.30",
     "start_time": "10.00",
     "stage": "Raatihuoneenpuiston lava",
-    "organizer": "",
-    "description": "",
+    "organizer": "SuomiAreena",
+    "description": "Droonihavainnot, rajahäiriöt ja jatkuva epävarmuus testaavat yhteiskunnan henkistä kantokykyä. Missä kulkee kansalaisten luottamuksen raja ja miten viranomaisten, median ja politiikan pitäisi toimia, kun uhka on samaan aikaan konkreettinen ja vaikeasti hahmotettava.",
     "speakers": [
       {
+        "name": "Katri Makkonen",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
         "name": "Johanna Vuorelma",
-        "title": "kansainvälisen politiikan yliopistonlehtori",
-        "organization": "Tampereen yliopisto."
+        "role": "",
+        "title": "valtio-opin dosentti, yliopistonlehtori",
+        "organization": "Tampereen yliopisto"
       },
       {
         "name": "Aki-Mauri Huhtinen",
-        "title": "eversti",
-        "organization": "informaatiosodankäynnin ja strategisen viestinnän asiantuntijana"
+        "role": "",
+        "title": "eversti, informaatiosodankäynnin ja strategisen viestinnän asiantuntijana",
+        "organization": ""
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
   },
   {
     "post_id": "1807",
@@ -334,57 +341,74 @@
     "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/suomiareenan-suuri-turvallisuuspaiva/",
+    "post_id": "62667",
+    "url": "https://www.suomiareena.fi/event/venajan-ja-kiinan-hybridivaikuttaminen-mita-tapahtuu-ja-miten-siihen-vastataan/",
     "title": "Venäjän ja Kiinan hybridivaikuttaminen: mitä tapahtuu ja miten siihen vastataan?",
     "date": "23.6.2026",
     "time_range": "10.30–11.00",
     "start_time": "10.30",
     "stage": "Raatihuoneenpuiston lava",
-    "organizer": "",
-    "description": "",
+    "organizer": "SuomiAreena",
+    "description": "Venäjän ja Kiinan vaikuttaminen ei näy vain propagandana, vaan myös talouden, teknologian, infrastruktuurin ja yhteiskunnallisen keskustelun kautta. Mitä hybridivaikuttaminen juuri nyt tarkoittaa ja millaisia vastauksia Suomella on käytössään.",
     "speakers": [
       {
+        "name": "Laura Saarikoski",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
         "name": "Milla Meretniemi",
-        "title": "Suojelupoliisi"
+        "role": "",
+        "title": "",
+        "organization": "Suojelupoliisi"
       },
       {
         "name": "Jarno Limnell",
-        "title": "kansanedustaja (kok.)"
+        "role": "",
+        "title": "kansanedustaja",
+        "organization": "(kok.)"
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/suomiareenan-suuri-turvallisuuspaiva/",
+    "post_id": "62757",
+    "url": "https://www.suomiareena.fi/event/digitaalinen-rintama-kulkee-korvien-valissa-kuka-huolehtii-sen-kestavyydesta/",
     "title": "Digitaalinen rintama kulkee korvien välissä – kuka huolehtii sen kestävyydestä?",
     "date": "23.6.2026",
     "time_range": "11.00–11.45",
     "start_time": "11.00",
     "stage": "Raatihuoneenpuiston lava",
-    "organizer": "",
-    "description": "",
+    "organizer": "SuomiAreena",
+    "description": "Digitaalinen turvallisuus ei ole vain järjestelmien, palomuurien ja alustojen kysymys, vaan myös ihmisten havaintokyvyn, luottamuksen ja jaksamisen kysymys. Keskustelu kysyy, kuka kantaa vastuun mielen, median ja digitaalisen arjen kriisinkestävyydestä.",
     "speakers": [
       {
+        "name": "Katri Makkonen",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
         "name": "Maria Keinonen",
+        "role": "",
         "title": "kyberopettaja ja everstiluutnantti",
         "organization": "Maanpuolustuskorkeakoulu"
       },
       {
         "name": "Markus Asikainen",
+        "role": "",
         "title": "turvallisuus- ja puolustussektorin liiketoimintajohtaja",
         "organization": "Gofore"
       },
       {
         "name": "Miriam Hautala",
+        "role": "",
         "title": "tutkija",
         "organization": "Jyväskylän yliopisto"
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
   },
   {
     "post_id": "817",
@@ -757,38 +781,54 @@
     "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/suomiareenan-suuri-turvallisuuspaiva/",
+    "post_id": "62753",
+    "url": "https://www.suomiareena.fi/event/pelastaako-puolustusteollisuus-suomen-talouden-kuinka-isosta-mahdollisuudesta-puhutaan-ja-mita-se-kaytannossa-suomelta-vaatii/",
     "title": "Pelastaako puolustusteollisuus Suomen talouden – Kuinka isosta mahdollisuudesta puhutaan ja mitä se käytännössä Suomelta vaatii?",
     "date": "23.6.2026",
     "time_range": "12.00–12.45",
     "start_time": "12.00",
     "stage": "Raatihuoneenpuiston lava",
-    "organizer": "",
-    "description": "",
+    "organizer": "SuomiAreena",
+    "description": "Suomen puolustus- ja turvallisuusteollisuudessa nähdään nyt poikkeuksellinen kasvumahdollisuus. Nato-jäsenyys, Euroopan kasvavat puolustusmenot, Ukrainan sota, huoltovarmuuden korostuminen ja kaksikäyttöteknologioiden nopea kehitys avaavat suomalaisille yrityksille uusia markkinoita. Mutta millaisista euroista oikeastaan puhutaan? Mitä meiltä puuttuu onnistumisen tieltä? Onko Suomessa riittävästi osaajia ja koulutetaanko heitä tarpeeksi? Jos Suomi haluaa rakentaa puolustusteollisuudesta uuden talouskasvun veturin, millainen maa meidän pitää olla esimerkiksi yrityksille, maahanmuuttajille ja kumppanimaillemme?",
     "speakers": [
       {
+        "name": "Katri Makkonen",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
+        "name": "Laura Saarikoski",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
         "name": "Panu Routila",
+        "role": "",
         "title": "toimitusjohtaja",
         "organization": "Patria"
       },
       {
         "name": "Mika Lintilä",
-        "title": "kansanedustaja (kesk.)"
+        "role": "",
+        "title": "kansanedustaja",
+        "organization": "(kesk.)"
       },
       {
         "name": "Taina Susiluoto",
-        "title": "toimitusjohtaja",
+        "role": "",
+        "title": "Toimitusjohtaja",
         "organization": "Teknologiateollisuus"
       },
       {
         "name": "Joakim Westerlund",
+        "role": "",
         "title": "toimitusjohtaja",
         "organization": "Forcit"
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
   },
   {
     "post_id": "667",
@@ -1167,38 +1207,54 @@
     "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/suomiareenan-suuri-turvallisuuspaiva/",
-    "title": "Puolustusteollisuus ja –vienti murroksessa: turvallisuutta, kasvua ja vastuuta",
+    "post_id": "62748",
+    "url": "https://www.suomiareena.fi/event/puolustusteollisuus-ja-vienti-murroksessa-turvallisuutta-kasvua-ja-vastuuta/",
+    "title": "Puolustusteollisuus ja -vienti murroksessa: turvallisuutta, kasvua ja vastuuta",
     "date": "23.6.2026",
     "time_range": "13.00–13.45",
     "start_time": "13.00",
     "stage": "Raatihuoneenpuiston lava",
-    "organizer": "",
-    "description": "",
+    "organizer": "SuomiAreena",
+    "description": "Suomalainen puolustus- ja turvallisuusteollisuus on perinteistä asevalmistusta ja panssaroituja ajoneuvoja, mutta se on paljon muutakin: kyberratkaisuja, jäänmurtajia, drooneja, sensoreita, ohjelmistoja ja muuta kaksikäyttöteknologiaa. Mistä kaikesta puhutaan, kun puhutaan puolustusteollisuuden kasvusta? Kenelle sitä viedään ja mikä on valtion ja ylimmän valtiojohdon rooli kaupparatsuina? Samalla keskustellaan vastuusta: mihin Suomenpitäisi viedä ja minne voi viedä? Vielä muutama vuosi puolustus- ja aseteollisuus ei ollut muotia politiikassa ja esimerkiksi monille sijoittajille puolustus oli kokonaan salkuista ulos rajattu toimiala. Mikä on muuttunut?",
     "speakers": [
       {
+        "name": "Katri Makkonen",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
+        "name": "Laura Saarikoski",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
         "name": "Mika Heiskanen",
+        "role": "",
         "title": "toimitusjohtaja",
         "organization": "Davie Suomen telakat"
       },
       {
         "name": "Olli Ruutu",
+        "role": "",
         "title": "ylijohtaja",
         "organization": "Puolustusministeriö"
       },
       {
         "name": "Petri Toljamo",
+        "role": "",
         "title": "toimitusjohtaja",
         "organization": "Bittium Oy"
       },
       {
         "name": "Mikko Savola",
-        "title": "kansanedustaja (kesk.)"
+        "role": "",
+        "title": "kansanedustaja",
+        "organization": "(kesk.)"
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
   },
   {
     "post_id": "36669",
@@ -1323,8 +1379,15 @@
     "start_time": "13.00",
     "stage": "Kirkkolava",
     "organizer": "WWF Suomi, Ulkopoliittinen instituutti",
-    "description": "Lyhyt kuvaus:\n\nIlmastonmuutos ja luontokato eivät ole vain ympäristökysymyksiä. Ne vaikuttavat ruokaturvaan, vesivaroihin, talouteen, huoltovarmuuteen ja yhteiskuntien vakauteen. Miten Suomen ulko- ja turvallisuuspolitiikan tulisi vastata ympäristökriisien aikakauteen?\n\nPuhujina: poliitikkopaneeli, WWF:n pääsihteeri Jari Luukkonen, Ulkopoliittisen instituutin johtava tutkija Emma Hakala ja S-ryhmän vastuullisuusjohtaja Nina Elomaa",
-    "speakers": [],
+    "description": "Lyhyt kuvaus:\n\nIlmastonmuutos ja luontokato eivät ole vain ympäristökysymyksiä. Ne vaikuttavat ruokaturvaan, vesivaroihin, talouteen, huoltovarmuuteen ja yhteiskuntien vakauteen. Miten Suomen ulko- ja turvallisuuspolitiikan tulisi vastata ympäristökriisien aikakauteen?\n\nPuhujina: poliitikkopaneeli, WWF:n pääsihteeri Jari Luukkonen, Ulkopoliittisen instituutin johtava tutkija Emma Hakala ja S-ryhmän vastuullisuusjohtaja Nina Elomaa.",
+    "speakers": [
+      {
+        "name": "Julia Thurén",
+        "role": "Juontaja",
+        "title": "Toimittaja",
+        "organization": ""
+      }
+    ],
     "error": null
   },
   {
@@ -1336,8 +1399,15 @@
     "start_time": "13.30",
     "stage": "Muu sijainti",
     "organizer": "Suomen musiikkioppilaitosten liitto",
-    "description": "Tervetuloa seuraamaan avointa mestarikurssia, jossa musiikki herää eloon!\n\nPitkän linjan pianopedagogi Kristiina Junttu ja taiteen perusopetuksen piano-oppilaan yhteisellä oppitunnilla pääset tutustumaan musiikin taiteen perusopetuksen arkeen ja työskentelytapoihin lähietäisyydeltä.\n\nTilaisuus tarjoaa kuulijoille ainutlaatuisen mahdollisuuden nähdä, miten pitkäjänteinen oppiminen, yksilöllinen ohjaus ja tavoitteellinen harjoittelu rakentavat soittotaitoa vaihe vaiheelta. Samalla avautuu näkymä musiikin taiteen perusopetuksen keskeisiin periaatteisiin: oppilaan kokonaisvaltaiseen kehitykseen, luovuuden tukemiseen sekä musiikillisen ajattelun vahvistamiseen.\n\nAvoin mestarikurssi sopii kaikille musiikista ja oppimisesta kiinnostuneille – tule kuuntelemaan, oppimaan ja nauttimaan elävästä musiikista!\n\n(Musiikin taiteen perusopetuksesta keskustellaan tämän jälkeen Puuvillan lavalla klo 15. Keskustelemassa mm. aivotutkija Minna Huotilainen ja kansanedustajat Krista Kiuru, Eeva Kalli, Inka Hopsu ja Mia Laiho. Mukana keskustelussa myös Espoon musiikkiopiston rehtori Paula Jordan. Tilaisuuden moderoi rehtori Jouni Auramo.)\n\nJärjestämme myös SuomiAreenan etkot Raatihuonella ma 22.6. klo 18, jolloin saamme kuulla nautinnollisen konsertin Satakunnan alueen nuorilta ja taitavilta muusikoilta.",
-    "speakers": [],
+    "description": "Promenadisali (Yrjönkatu 17 28100 Pori)\n\nTervetuloa seuraamaan avointa mestarikurssia, jossa musiikki herää eloon!\n\nPitkän linjan pianopedagogi Kristiina Junttu ja taiteen perusopetuksen piano-oppilaan yhteisellä oppitunnilla pääset tutustumaan musiikin taiteen perusopetuksen arkeen ja työskentelytapoihin lähietäisyydeltä.\n\nTilaisuus tarjoaa kuulijoille ainutlaatuisen mahdollisuuden nähdä, miten pitkäjänteinen oppiminen, yksilöllinen ohjaus ja tavoitteellinen harjoittelu rakentavat soittotaitoa vaihe vaiheelta. Samalla avautuu näkymä musiikin taiteen perusopetuksen keskeisiin periaatteisiin: oppilaan kokonaisvaltaiseen kehitykseen, luovuuden tukemiseen sekä musiikillisen ajattelun vahvistamiseen.\n\nAvoin mestarikurssi sopii kaikille musiikista ja oppimisesta kiinnostuneille – tule kuuntelemaan, oppimaan ja nauttimaan elävästä musiikista!\n\n(Musiikin taiteen perusopetuksesta keskustellaan tämän jälkeen Puuvillan lavalla klo 15. Keskustelemassa mm. aivotutkija Minna Huotilainen ja kansanedustajat Krista Kiuru, Eeva Kalli, Inka Hopsu ja Mia Laiho. Mukana keskustelussa myös Espoon musiikkiopiston rehtori Paula Jordan. Tilaisuuden moderoi rehtori Jouni Auramo.)\n\nJärjestämme myös SuomiAreenan etkot Raatihuonella ma 22.6. klo 18, jolloin saamme kuulla nautinnollisen konsertin Satakunnan alueen nuorilta ja taitavilta muusikoilta.",
+    "speakers": [
+      {
+        "name": "Kristiina Junttu",
+        "role": "",
+        "title": "",
+        "organization": ""
+      }
+    ],
     "error": null
   },
   {
@@ -1579,33 +1649,42 @@
     "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/suomiareenan-suuri-turvallisuuspaiva/",
+    "post_id": "62746",
+    "url": "https://www.suomiareena.fi/event/pohjoismaat-demokratian-ja-turvallisuuden-takaajina-onko-pohjoismaiden-aika-ottaa-henkinen-johtajuus-euroopan-turvallisuudesta/",
     "title": "Pohjoismaat demokratian ja turvallisuuden takaajina – onko Pohjoismaiden aika ottaa henkinen johtajuus Euroopan turvallisuudesta?",
     "date": "23.6.2026",
     "time_range": "14.00–14.45",
     "start_time": "14.00",
     "stage": "Raatihuoneenpuiston lava",
-    "organizer": "",
-    "description": "",
+    "organizer": "SuomiAreena",
+    "description": "Miten pohjoismainen yhteistyö voi vahvistaa demokratiaa, puolustusta ja Naton pohjoista ulottuvuutta muuttuneessa turvallisuusympäristössä? Keskustelussa tarkastellaan, millaista vastuuta Pohjoismaat voivat kantaa Euroopan turvallisuuden, kriisinkestävyyden ja demokraattisten arvojen puolustamisessa. Voivatko Pohjoismaat nousta Euroopan henkisiksi johtajiksi turvallisuuspolitiikassa, ja mitä se käytännössä tarkoittaisi? Samalla pohditaan, miten Eurooppa tulee ajattelemaan turvallisuudesta sen jälkeen, kun Ukrainassa joskus syntyy rauha, ja millainen rooli Pohjolalla voi olla uuden turvallisuusajattelun suunnannäyttäjänä.",
     "speakers": [
       {
+        "name": "Katri Makkonen",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
         "name": "Kristian Tornivaara",
+        "role": "",
         "title": "toimitusjohtaja",
         "organization": "Saab Finland Oy"
       },
       {
         "name": "Matti Pesu",
+        "role": "",
         "title": "vanhempi tutkija",
         "organization": "Ulkopoliittinen instituutti"
       },
       {
         "name": "Mari Holopainen",
-        "title": "kansanedustaja (virh.)"
+        "role": "",
+        "title": "kansanedustaja",
+        "organization": "(virh.)"
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
   },
   {
     "post_id": "4893",
@@ -1617,7 +1696,148 @@
     "stage": "Kaupungintalon pihan lava",
     "organizer": "SuomiAreena ja PING Helsinki",
     "description": "Vaikuttavan markkinoinnin toimiston PING Helsingin kanssa toteutettu IMPACT-ohjelmakokonaisuus tuo yhteen yhteiskunnalliset päättäjät, asiantuntijat ja sosiaalisen median vaikuttajat! Ohjelma tarjoaa kiinnostavia ja ajankohtaisia keskusteluja vallasta vuorovaikutuksesta ja luottamuksen rakentamisesta erityisesti sosiaalisessa mediassa. Ohjelma luo myös yleisölle mahdollisuuden jakaa omia näkemyksiään.\n\nOhjelmassa:\n\nKlo 14 Kestävämpi maailma\n\nKlo 15 Tulevaisuuden toivo\n\nKlo 16 Turvallinen yhteiskunta\n\nKlo 17 Tulevaisuuden Suomi\n\nKeskusteluosioiden välissä nautitaan yllätysohjelmasta! Tulevaisuuden Suomi -kokonaisuuden kumppaneita ovat mm: Diakonissalaitos, Live-säätiö, Lukuboost, S-Pankki ja Tieto.\n\nTulevaisuuden Suomi -keskustelu jatkuu keskiviikkona klo 10 Paviljongin lavalla toimialakohtaisilla keskusteluissa, joissa nostetaan esiin ratkaisuja tulevaisuuden ratkaisuina niin tekoälyä, nuorten tulevaisuususkon rakentamista, sosiaalisia innovaatioita, lukutaidon merkitystä sekä työllisyyden ja koulutuksen ratkaisuja.\n\nTulevaisuuden Suomi -ohjelman vaikuttajat ja muut keskustelijat julkaistaan kesäkuun toisella viikolla.",
-    "speakers": [],
+    "speakers": [
+      {
+        "name": "Roni Back",
+        "role": "Juontaja",
+        "title": "somevaikuttaja",
+        "organization": "",
+        "source": "news"
+      },
+      {
+        "name": "Pinja Orre",
+        "role": "Juontaja",
+        "title": "vaikuttajamarkkinoinnin asiantuntija",
+        "organization": "PING Helsinki",
+        "source": "news"
+      },
+      {
+        "name": "Jutta Karjalainen",
+        "role": "",
+        "title": "johtava asiantuntija, tekoäly ja vastuullisuus",
+        "organization": "Tieto Tech Consulting",
+        "source": "news"
+      },
+      {
+        "name": "Mirjam Sokka",
+        "role": "",
+        "title": "perustaja ja toimitusjohtaja",
+        "organization": "Kaiko",
+        "source": "news"
+      },
+      {
+        "name": "Viliina Välimäki",
+        "role": "",
+        "title": "Porin valtuuston puheenjohtaja (kok.)",
+        "organization": "",
+        "source": "news"
+      },
+      {
+        "name": "Jesse “Branu” Branthin",
+        "role": "",
+        "title": "tubettaja",
+        "organization": "",
+        "source": "news"
+      },
+      {
+        "name": "Niko Tamminen",
+        "role": "",
+        "title": "varapuheenjohtaja",
+        "organization": "Suomen Partiolaiset",
+        "source": "news"
+      },
+      {
+        "name": "Jayla Tammiharju",
+        "role": "",
+        "title": "",
+        "organization": "",
+        "source": "news"
+      },
+      {
+        "name": "Leo Niemelä",
+        "role": "",
+        "title": "tietoturvajohtaja",
+        "organization": "S-Pankki",
+        "source": "news"
+      },
+      {
+        "name": "Senni Jyrkiäinen",
+        "role": "",
+        "title": "valmiuspäällikkö",
+        "organization": "Mediapooli",
+        "source": "news"
+      },
+      {
+        "name": "Juho Rautvaara",
+        "role": "",
+        "title": "somevaikuttaja",
+        "organization": "",
+        "source": "news"
+      },
+      {
+        "name": "Perttu Jussila",
+        "role": "",
+        "title": "kaupunginhallituksen varapuheenjohtaja (vihr.)",
+        "organization": "Tampere",
+        "source": "news"
+      },
+      {
+        "name": "Anni Lintula",
+        "role": "",
+        "title": "toiminnanjohtaja",
+        "organization": "IAB Finland",
+        "source": "news"
+      },
+      {
+        "name": "Tommi Ristola",
+        "role": "",
+        "title": "somevaikuttaja",
+        "organization": "",
+        "source": "news"
+      },
+      {
+        "name": "Tero Ojanperä",
+        "role": "",
+        "title": "teknologiayrittäjä, sijoittaja, tekoälyvaikuttaja",
+        "organization": "",
+        "source": "news"
+      },
+      {
+        "name": "Shadia Rask",
+        "role": "",
+        "title": "väestötutkija ja yhdenvertaisuuskouluttaja",
+        "organization": "Hanken",
+        "source": "news"
+      },
+      {
+        "name": "Olli Mäkelä",
+        "role": "",
+        "title": "yksityisen sektorin toimialajohtaja",
+        "organization": "Tieto Tech Consulting",
+        "source": "news"
+      },
+      {
+        "name": "Emmi Jäkkö",
+        "role": "",
+        "title": "toiminnanjohtaja",
+        "organization": "Lukukeskus",
+        "source": "news"
+      },
+      {
+        "name": "Jaana Hirsikangas",
+        "role": "",
+        "title": "toiminnanjohtaja",
+        "organization": "UN Women Suomi",
+        "source": "news"
+      },
+      {
+        "name": "Mikko Käkelä",
+        "role": "",
+        "title": "toimitusjohtaja",
+        "organization": "ETL",
+        "source": "news"
+      }
+    ],
     "error": null
   },
   {
@@ -1665,33 +1885,42 @@
     "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/suomiareenan-suuri-turvallisuuspaiva/",
+    "post_id": "62763",
+    "url": "https://www.suomiareena.fi/event/miksi-puolustus-saa-maksaa-kun-muusta-leikataan-ja-mika-siina-puolustuksessa-oikein-maksaa/",
     "title": "Miksi puolustus saa maksaa, kun muusta leikataan – ja mikä siinä puolustuksessa oikein maksaa?",
     "date": "23.6.2026",
     "time_range": "15.00–15.30",
     "start_time": "15.00",
     "stage": "Raatihuoneenpuiston lava",
-    "organizer": "",
-    "description": "",
+    "organizer": "SuomiAreena",
+    "description": "Puolustusmenojen kasvu on yksi aikamme suurista poliittisista ja taloudellisista valinnoista. Keskustelu purkaa, mihin rahat menevät, miksi puolustukseen suhtaudutaan eri tavalla kuin moniin muihin menoihin ja miten kansalaisille kerrotaan kustannusten perusteet.",
     "speakers": [
       {
+        "name": "Laura Saarikoski",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
         "name": "Jukka Kopra",
-        "title": "kansanedustaja (kok.)"
+        "role": "",
+        "title": "kansanedustaja (kok.)",
+        "organization": ""
       },
       {
         "name": "Esa Pulkkinen",
-        "title": "kenraaliluutnantti evp.",
-        "organization": "puolustusministeriön entinen kansliapäällikkö"
+        "role": "",
+        "title": "kenraaliluutnantti evp., puolustusministeriön entinen kansliapäällikkö",
+        "organization": ""
       },
       {
         "name": "Rosa Meriläinen",
+        "role": "",
         "title": "pääsihteeri",
         "organization": "KULTA ry"
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
   },
   {
     "post_id": "911",
@@ -1832,34 +2061,42 @@
     "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/suomiareenan-suuri-turvallisuuspaiva/",
-    "title": "Mitä on kriittinen infra ja kokonaisturvallisuus käytännössä ja olisiko niistävientituotteeksi?",
+    "post_id": "62765",
+    "url": "https://www.suomiareena.fi/event/mita-on-kriittinen-infra-ja-kokonaisturvallisuus-kaytannossa-ja-olisiko-niista-vientituotteeksi/",
+    "title": "Mitä on kriittinen infra ja kokonaisturvallisuus käytännössä ja olisiko niistä vientituotteeksi?",
     "date": "23.6.2026",
     "time_range": "15.30–16.15",
     "start_time": "15.30",
     "stage": "Raatihuoneenpuiston lava",
-    "organizer": "",
-    "description": "",
+    "organizer": "SuomiAreena",
+    "description": "Mitä on kriittinen infrastruktuuri käytännössä, ja miten siitä pidetään huolta Suomessa? Mitä kokonaisturvallisuus ihan konkreettisesti tarkoittaa? Nyt Suomen kokonaisturvallisuuden malli kiinnostaa myösmaailmalla, mutta voiko sitä purkittaa ja myydä? Ruotsi on jo ottanut seuraavan askeleen ja tuotteistanut mallinsa, mutta kuinka Suomelle käy?",
     "speakers": [
       {
+        "name": "Katri Makkonen",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
         "name": "Aleksi Salmirinne",
+        "role": "",
         "title": "toimitusjohtaja",
         "organization": "Insta Industries"
       },
       {
         "name": "Annukka Ylivaara",
-        "title": "everstiluutnantti",
-        "organization": "Turvallisuuskomitean yleissihteeri"
+        "role": "",
+        "title": "everstiluutnantti, Turvallisuuskomitean yleissihteeri",
+        "organization": ""
       },
       {
         "name": "Minna Helle",
+        "role": "",
         "title": "toimitusjohtaja",
         "organization": "Elinkeinoelämän keskusliitto"
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
   },
   {
     "post_id": "706",
@@ -2038,6 +2275,44 @@
     "error": null
   },
   {
+    "post_id": "62767",
+    "url": "https://www.suomiareena.fi/event/the-future-of-transatlantic-defence-cooperation-and-natos-strategic-transformation/",
+    "title": "The Future of Transatlantic Defence Cooperation and NATO’s Strategic Transformation",
+    "date": "23.6.2026",
+    "time_range": "16.15–17.00",
+    "start_time": "16.15",
+    "stage": "Raatihuoneenpuiston lava",
+    "organizer": "SuomiAreena",
+    "description": "As the European security environment undergoes its most significant transformation in decades, NATO is redefining its strategic posture, deterrence capabilities, and partnership models. At the same time, evolving geopolitical dynamics are reshaping the transatlantic security architecture and placing new demands on allied cooperation, resilience, and military readiness. From the Arctic and the High North to the Baltic Sea region and beyond, strategic competition and security challenges are becoming increasingly interconnected.\n\nHow are geopolitical shifts reshaping NATO’s priorities and long-term strategy? What does allied cohesion look like in a more contested and unpredictable security environment? How are allies and partners adapting to new realities across Europe and the wider transatlantic area? And what role can Finland play as a frontline NATO ally with deep expertise in Arctic security, resilience, and transatlantic cooperation?",
+    "speakers": [
+      {
+        "name": "Air Chief Marshal The Lord Peach KG GBE KCB DL",
+        "role": "",
+        "title": "former Chair of the NATO Military Committee",
+        "organization": ""
+      },
+      {
+        "name": "H.E. Mr. Patrick Hébert",
+        "role": "",
+        "title": "Ambassador of Canada to Finland",
+        "organization": ""
+      },
+      {
+        "name": "Mrs. Karoliina Honkanen",
+        "role": "",
+        "title": "Director, Defence Cooperation Unit",
+        "organization": "Ministry of Defence of Finland"
+      },
+      {
+        "name": "Lieutenant General (Ret.) Esa Pulkkinen",
+        "role": "",
+        "title": "former Permanent Secretary",
+        "organization": "Ministry of Defence of Finland"
+      }
+    ],
+    "error": null
+  },
+  {
     "post_id": null,
     "url": "https://www.suomiareena.fi/2026/06/suomiareenan-suuri-turvallisuuspaiva/",
     "title": "The Future of Transatlantic Defence Cooperation and NATO’s Strategic Transformation",
@@ -2101,41 +2376,6 @@
       }
     ],
     "error": null
-  },
-  {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/suomiareenan-suuri-turvallisuuspaiva/",
-    "title": "Pelotteen voima ja rauhan perintö – Suomen kansainvälinen rooli vuonna 2026",
-    "date": "23.6.2026",
-    "time_range": "17.00–17.45",
-    "start_time": "17.00",
-    "stage": "Raatihuoneenpuiston lava",
-    "organizer": "",
-    "description": "",
-    "speakers": [
-      {
-        "name": "Oskari Eronen",
-        "title": "ohjelmajohtaja",
-        "organization": "CMI – Martti Ahtisaari Peace Foundation"
-      },
-      {
-        "name": "Terhi Suominen",
-        "title": "pääsihteeri",
-        "organization": "Suomen Atlantti-Seura"
-      },
-      {
-        "name": "Tuomas Forsberg",
-        "title": "kansainvälisen politiikan professori",
-        "organization": "Tampereen yliopisto"
-      },
-      {
-        "name": "Mikko Savola",
-        "title": "kansanedustaja",
-        "organization": "Naton parlamentaarisen yleiskokouksen vara pj."
-      }
-    ],
-    "error": null,
-    "source": "theme-day-article"
   },
   {
     "post_id": "892",
@@ -2238,6 +2478,50 @@
     "error": null
   },
   {
+    "post_id": "62772",
+    "url": "https://www.suomiareena.fi/event/pelotteen-voima-ja-rauhan-perinto-suomen-kansainvalinen-rooli-vuonna-2026/",
+    "title": "The Power of Deterrence and the Legacy of Peace – Finland’s International Role in 2026",
+    "date": "23.6.2026",
+    "time_range": "17.00–17.45",
+    "start_time": "17.00",
+    "stage": "Raatihuoneenpuiston lava",
+    "organizer": "SuomiAreena",
+    "description": "Finland is known for its strong defence, trained reserve and comprehensive security model. With NATO membership, Finland has become an even more visible provider of security in Europe and within the Alliance. At the same time, Finland carries forward Martti Ahtisaari’s legacy as a country of peace mediation, diplomacy and dialogue. The panel will discuss how credible defence and peacebuilding are reflected in Finland’s international role in 2026.",
+    "speakers": [
+      {
+        "name": "Oskari Eronen",
+        "role": "",
+        "title": "Chief Programme Officer",
+        "organization": "CMI – Martti Ahtisaari Peace Foundation"
+      },
+      {
+        "name": "Terhi Suominen",
+        "role": "",
+        "title": "Secretary General",
+        "organization": "Atlantic Council of Finland"
+      },
+      {
+        "name": "Tuomas Forsberg",
+        "role": "",
+        "title": "Professor of International Relations",
+        "organization": "Tampere University"
+      },
+      {
+        "name": "Mikko Savola",
+        "role": "",
+        "title": "Member of Parliament, Vice-President",
+        "organization": "NATO Parliamentary Assembly"
+      },
+      {
+        "name": "H.E. Laura Davies",
+        "role": "",
+        "title": "His Majesty’s Ambassador to the Republic of Finland",
+        "organization": ""
+      }
+    ],
+    "error": null
+  },
+  {
     "post_id": "779",
     "url": "https://www.suomiareena.fi/event/turvaako-suomi-laakehoidon-ja-rokotteet-kun-maailma-horjuu/",
     "title": "Turvaako Suomi lääkehoidon ja rokotteet, kun maailma horjuu?",
@@ -2326,27 +2610,36 @@
     "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/suomiareenan-suuri-turvallisuuspaiva/",
+    "post_id": "62775",
+    "url": "https://www.suomiareena.fi/event/usa-vetaytyy-nato-muuttuu-miten-eurooppa-ottaa-vastuuta-ja-miten-suomea-puolustetaan/",
     "title": "USA vetäytyy, Nato muuttuu – miten Eurooppa ottaa vastuuta ja miten Suomea puolustetaan?",
     "date": "23.6.2026",
     "time_range": "18.00–19.00",
     "start_time": "18.00",
     "stage": "Raatihuoneenpuiston lava",
     "organizer": "",
-    "description": "",
+    "description": "Yhdysvaltain roolin muutos pakottaa Euroopan ja Suomen pohtimaan, mitä liittokunnan pelote tarkoittaa käytännössä. Päivän päätöshaastatteluissa ensin puolustusvoimain komentaja Janne Jaakkola, jota seuraa presidentti Sauli Niinistö. Haastatteluita seuraa yhteinen keskustelu.",
     "speakers": [
       {
+        "name": "Katri Makkonen",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
         "name": "Sauli Niinistö",
-        "title": "presidentti"
+        "role": "",
+        "title": "presidentti",
+        "organization": ""
       },
       {
         "name": "Janne Jaakkola",
-        "title": "Puolustusvoimain komentaja"
+        "role": "",
+        "title": "Puolustusvoimain komentaja",
+        "organization": ""
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
   },
   {
     "post_id": "3370",
@@ -2474,8 +2767,39 @@
     "start_time": "10.00",
     "stage": "Raatihuoneenpuiston lava",
     "organizer": "Ulkopoliittinen instituutti",
-    "description": "Ei kuvausta",
-    "speakers": [],
+    "description": "Ulkopoliittinen instituutti (UPI) tuo Suomi Areenaan katsauksen ulkopolitiikan polttavimmista kysymyksistä. Mikä on Suomen rooli eurooppalaisemmassa Natossa, kun vanhat valtarakenteet horjuvat? Entä millaisia kuulumisia kesän ulko- ja turvallisuuspolitiikan tapaamiset kuten Kultaranta-keskustelut ja Naton huippukokous tuovat tullessaan?\n\nPorin kesäaamussa UPIn johtaja Hiski Haukkala, tutkija Joel Linnainmäki, vanhempi tutkija Matti Pesu sekä vanhempi tutkija Iro Särkkä pureutuvat näihin kysymyksiin vanhemman tutkijan Katariina Mustasillan johdolla. Paneelikeskustelussa avataan maailmanpolitiikan muutosten taustoja sekä arvioidaan niiden vaikutusta Suomeen ja Eurooppaan. Tervetuloa seuraamaan keskustelua!",
+    "speakers": [
+      {
+        "name": "Katariina Mustasilta",
+        "role": "Juontaja",
+        "title": "vanhempi tutkija",
+        "organization": "UPI"
+      },
+      {
+        "name": "Hiski Haukkala",
+        "role": "",
+        "title": "johtaja",
+        "organization": "UPI"
+      },
+      {
+        "name": "Joel Linnainmäki",
+        "role": "",
+        "title": "tutkija",
+        "organization": "UPI"
+      },
+      {
+        "name": "Matti Pesu",
+        "role": "",
+        "title": "vanhempi tutkija",
+        "organization": "UPI"
+      },
+      {
+        "name": "Iro Särkkä",
+        "role": "",
+        "title": "vanhempi tutkija",
+        "organization": "UPI"
+      }
+    ],
     "error": null
   },
   {
@@ -2632,8 +2956,54 @@
     "start_time": "10.00",
     "stage": "Satakunta-lava",
     "organizer": "SuomiAreena",
-    "description": "Olemme Suomessa tottuneet olemaan todella ylpeitä suomalaisesta ruuasta. Emme ehkä aina ravintolakulttuuristamme tai perinneruuistamme, mutta kotimainen ruoka – se on hyvää. Miksi tämä ylpeys ei kuitenkaan välity ruokavientiimme? Nykyään Viro vie enemmän ruokaa kuin Suomi. Missä siis on vika? Tätä SuomiAreenan Ruokapäivä lähtee selvittämään.\n\nSuomiAreenan Ruokapäivässä keskustellaan siitä, miten suomalaisesta ruoasta, sen tuotannosta ja ruokakulttuurista tehdään nykyistä suurempi kasvutarina, vientituote ja kansallinen ylpeydenaihe. Päivän aikana pureudutaan siihen, miten suomalainen ruokakulttuuri brändätään maailmalle, millaisella ruoalla Suomi voisi menestyä kansainvälisesti ja miksi suomalaiset itsekin ovat välillä epävarmoja siitä, mikä meidän ruokakulttuurissamme on oikeasti erityistä. Suomen ruokamaakuvaa ollaan parhaillaan uudistamassa, ja Ruokapäivässä keskustellaankin siitä, millä viesteillä Suomi maailmalle myydään.\n\nRuokapäivän ohjelmakokonaisuuden kumppaneina toimivat Agronomiliitto, Atria, Elintarviketeollisuusliitto ETL, Fazer, Helsingin yliopisto, Maa- ja metsätalousministeriö, MTK, Raisio, Ruokatieto, Suomen Ruokavienti, S-ryhmä, Ulkoministeriö ja Valio.\n\nRuokapäivän lopullinen ohjelma ja puhujat julkaistaan kesäkuun alussa.",
+    "description": "SuomiAreenan Ruokapäivä pureutuu siihen, miten suomalaisesta ruoasta ja ruokakulttuurista tehdään kansainvälinen menestystarina.\n\nPäivän aikana pohditaan, mistä tulevaisuuden vientivaltti löytyy sekä miten suomalainen luontoyhteys, metsät, hiljaisuus ja jopa kouluruoka valjastetaan Suomen ruokabrändiksi maailmalla. Poliitikot ja asiantuntijat pureksivat läpi Suomen uuttaruokastrategiaa ja ruokapolitiikan tavoitteita kohti.\n\nOhjelmakokonaisuuden mahdollistavat yhteistyössä Agronomiliitto, Atria, Elintarviketeollisuusliitto ETL, Fazer, Helsingin yliopisto, Maa- ja metsätalousministeriö, MTK, Raisio, Ruokatieto, Suomen Ruokavienti, S-ryhmä, Ulkoministeriö ja Valio",
     "speakers": [],
+    "error": null
+  },
+  {
+    "post_id": "74995",
+    "url": "https://www.suomiareena.fi/event/talta-suomalainen-ruokakauppa-nayttaa-turistin-silmin/",
+    "title": "Tältä suomalainen ruokakauppa näyttää turistin silmin",
+    "date": "24.6.2026",
+    "time_range": "10.00–10.15",
+    "start_time": "10.00",
+    "stage": "Satakunta-lava",
+    "organizer": "SuomiAreenan Ruokapäivä",
+    "description": "Miltä suomalainen ruokakauppa näyttää ulkomaisen vieraan silmin? Tanskan Suomen-suurlähettiläs Jakob Nymann-Lindegrenin haastattelussa tarkastellaan suomalaista ruokakulttuuria, ruokakauppoja ja kuluttamista ulkopuolisen havainnoijan näkökulmasta. Mitkä asiat suomalaisessa ruokajärjestelmässä herättävät kiinnostusta, hämmästystä tai ihailua?\n\nMiten asiat hoidetaan eri tavalla Tanskassa ja mihin maan menestys ruokaviennissä perustuu?",
+    "speakers": [
+      {
+        "name": "Baba Lybeck",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
+        "name": "H.E. Jakob Nymann-Lindegren",
+        "role": "",
+        "title": "Tanskan suurlähettiläs Suomessa",
+        "organization": ""
+      }
+    ],
+    "error": null
+  },
+  {
+    "post_id": "67383",
+    "url": "https://www.suomiareena.fi/event/vapaus-onnistua-vastuu-huolehtia-millainen-suomi-rakennetaan-2040-luvulle/",
+    "title": "Vapaus onnistua, vastuu huolehtia – millainen Suomi rakennetaan 2040-luvulle?",
+    "date": "24.6.2026",
+    "time_range": "10.00–10.45",
+    "start_time": "10.00",
+    "stage": "Sata Shipbuilding -lava",
+    "organizer": "Kokoomus",
+    "description": "Miltä näyttää Suomi, jossa varmistetaan, että suomalainen yhteiskunta on yhtä aikaa vapaampi, vakaampi ja vauraampi myös 2040-luvulla?\n\nTässä SuomiAreenan keskustelussa tarkastellaan Suomen suuntaa Kokoomuksen tavoiteohjelman pohjalta. Tilaisuus ei ole pelkkä ohjelmaesittely, vaan näkymä siihen, millaisilla valinnoilla rakennetaan kestävää kasvua, vahvistetaan osaamista ja turvataan toimivat palvelut nopeasti muuttuvassa maailmassa.\n\nKeskustelun ytimessä on ajatus vapaudesta onnistua ja vastuusta huolehtia. Miten luodaan olosuhteet, joissa työnteko, yrittäjyys ja uuden luominen kannattavat – ja samalla varmistetaan, että jokaisesta pidetään huolta elämän eri tilanteissa?\n\nLavaohjelmassa puoluejohto avaa Suomen pitkän aikavälin suuntaa, ja keskustelu syventyy ajankohtaisiin kysymyksiin kasvusta, työstä, koulutuksesta ja teknologisesta uudistumisesta. Esillä ovat muun muassa julkisen talouden kestävyys, osaamisen merkitys, tekoälyn ja datan mahdollisuudet sekä arjen palveluiden toimivuus.\n\nKeskustelu kokoaa yhteen myös eri alojen näkökulmia siitä, mistä syntyy luottamus tulevaisuuteen – ja millaisia päätöksiä Suomen on tehtävä jo nyt, jotta menestys jatkuu pitkälle tuleviin vuosikymmeniin.\n\nTämä tilaisuus tarjoaa yleisölle selkeän ja ajankohtaisen kuvan siitä, millaisilla ratkaisuilla rakennetaan vahvempaa Suomea – askel askeleelta kohti 2040-lukua.",
+    "speakers": [
+      {
+        "name": "vastuu huolehtia – millainen Suomi rakennetaan 2040-luvulle? Vapaus onnistua",
+        "role": "",
+        "title": "",
+        "organization": ""
+      }
+    ],
     "error": null
   },
   {
@@ -2714,6 +3084,50 @@
         "role": "puhuja",
         "title": "toimitusjohtaja",
         "organization": "Canon Oy"
+      }
+    ],
+    "error": null
+  },
+  {
+    "post_id": "74989",
+    "url": "https://www.suomiareena.fi/event/menestysruoan-salainen-ainesosa/",
+    "title": "Menestysruoan salainen ainesosa",
+    "date": "24.6.2026",
+    "time_range": "10.15–11.00",
+    "start_time": "10.15",
+    "stage": "Satakunta-lava",
+    "organizer": "SuomiAreenan Ruokapäivä",
+    "description": "Miksi jokin ruokatuote menestyy maailmalla, kun toinen jää hyllyyn? Onko tulevaisuuden vientivaltti maussa, terveellisyydessä, puhtaudessa, vastuullisuudessa, teknologiassa vai vahvassa brändissä?\n\nKeskustelussa pureudutaan suomalaisen elintarviketeollisuuden kilpailuetuihin ja siihen, mistä seuraavat vientimenestykset voivat syntyä. Samalla tarkastellaan, miten lisäarvotuotteet, ruokainnovaatiot, jalostusaste ja kuluttajien muuttuvat odotukset muokkaavat kansainvälisiä markkinoita.\n\nMikä erottaa suomalaisen ruoan kilpailijoistaan ja mikä on se salainen ainesosa, jonka varaan seuraava suomalainen ruokamenestys rakennetaan?",
+    "speakers": [
+      {
+        "name": "Anna-Kaisa Auvinen",
+        "role": "",
+        "title": "yhteiskuntasuhdejohtaja",
+        "organization": "Valio"
+      },
+      {
+        "name": "Heli Anttila",
+        "role": "",
+        "title": "tuotekehitysjohtaja",
+        "organization": "Fazer"
+      },
+      {
+        "name": "Risto Lahti",
+        "role": "",
+        "title": "yhteiskuntasuhdejohtaja",
+        "organization": "Atria"
+      },
+      {
+        "name": "Noora Pöyhönen",
+        "role": "",
+        "title": "liiketoimintajohtaja, Breakfast, Snacking & Food Solutions",
+        "organization": "Raisio"
+      },
+      {
+        "name": "Juha Nieminen",
+        "role": "",
+        "title": "ryhmäpäällikko, marketkauppa",
+        "organization": "SOK"
       }
     ],
     "error": null
@@ -2802,6 +3216,62 @@
         "role": "",
         "title": "perustaja",
         "organization": "Upeart"
+      }
+    ],
+    "error": null
+  },
+  {
+    "post_id": "74982",
+    "url": "https://www.suomiareena.fi/event/mita-kerromme-maailmalle-suomalaisesta-ruuasta/",
+    "title": "Mitä kerromme maailmalle suomalaisesta ruuasta?",
+    "date": "24.6.2026",
+    "time_range": "11.00–11.50",
+    "start_time": "11.00",
+    "stage": "Satakunta-lava",
+    "organizer": "SuomiAreenan Ruokapäivä",
+    "description": "Suomi on aloittamassa ruokamaakuvansa uudistamista. Miten suomalainen luontoyhteys, metsät, hiljaisuus, onnellisuus ja jopa kouluruoka, buffetruokailu ja huoltovarmuus voisivat rakentaa Suomelle omaleimaisen ruokabrändin maailmalla.\n\nKeskustelussa eri alojen asiantuntijat pohtimassa suomalaisuuden, ruuan ja brändin maukkainta olemusta ja sitä, miten tämä kaikki tulisi paketoida yhdeksi reseptiksi.",
+    "speakers": [
+      {
+        "name": "Baba Lybeck",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
+        "name": "Loviisa ja Elli",
+        "role": "",
+        "title": "Maitotilan siskot",
+        "organization": ""
+      },
+      {
+        "name": "Katariina Vesterinen",
+        "role": "",
+        "title": "Suomalainen menestysresepti -voittaja",
+        "organization": ""
+      },
+      {
+        "name": "Jarna Hyvönen",
+        "role": "",
+        "title": "toimitusjohtaja",
+        "organization": "Volare"
+      },
+      {
+        "name": "Simo Harrivaara",
+        "role": "",
+        "title": "kokki",
+        "organization": "Kokkimaajoukkue"
+      },
+      {
+        "name": "Anni-Mari Syväniemi",
+        "role": "",
+        "title": "toiminnanjohtaja",
+        "organization": "Ruokatieto"
+      },
+      {
+        "name": "Satu Kalliokulju",
+        "role": "",
+        "title": "toimitusjohtaja",
+        "organization": "Inspirans"
       }
     ],
     "error": null
@@ -3057,6 +3527,50 @@
     "error": null
   },
   {
+    "post_id": "74997",
+    "url": "https://www.suomiareena.fi/event/kansallistunteita-ja-tuoksuja-mihin-mielleyhtymat-ruoasta-vievat-poliitikkoja/",
+    "title": "Kansallistunteita ja tuoksuja – mihin mielleyhtymät ruoasta vievät poliitikkoja?",
+    "date": "24.6.2026",
+    "time_range": "12.00–12.35",
+    "start_time": "12.00",
+    "stage": "Satakunta-lava",
+    "organizer": "SuomiAreenan Ruokapäivä",
+    "description": "Mihin maut vievät poliitikkoja? Mitä suomalaisuus maistuu, tuoksuu ja tuntuu, kun sitä tarkastellaan ruoan kautta?\n\nPoliitikot keskustelevat suomalaisen ruoan asemasta osana arkea, kulttuuria, huoltovarmuutta ja kansantaloutta. Keskustelussa tarkastellaan suomalaisen ruoan kulutusta, ruokapalveluita, ravintoloita ja kotitalouksien valintoja sekä sitä, miten politiikka näkyy ruokapöydissä – usein huomaamattakin.\n\nRuoka herättää muistoja, rakentaa identiteettiä ja kertoo siitä, millaisena näemme Suomen. Samalla se on myös valintoja kotimaisuuden, omavaraisuuden, terveyden, hinnan ja vastuullisuuden välillä.",
+    "speakers": [
+      {
+        "name": "Baba Lybeck",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
+        "name": "Joona Räsänen",
+        "role": "",
+        "title": "kansanedustaja",
+        "organization": "SDP"
+      },
+      {
+        "name": "Mia Laiho",
+        "role": "",
+        "title": "kansanedustaja",
+        "organization": "Kokoomus"
+      },
+      {
+        "name": "Mari Holopainen",
+        "role": "",
+        "title": "kansanedustaja",
+        "organization": "Vihreät"
+      },
+      {
+        "name": "Janne Jukkola",
+        "role": "",
+        "title": "kansanedustaja",
+        "organization": "Kokoomus"
+      }
+    ],
+    "error": null
+  },
+  {
     "post_id": "1845",
     "url": "https://www.suomiareena.fi/event/politiikkaralli/",
     "title": "Politiikkaralli",
@@ -3291,6 +3805,32 @@
     "error": null
   },
   {
+    "post_id": "60468",
+    "url": "https://www.suomiareena.fi/event/turvallisuus-ja-maahanmuutto-politiikan-ajankohtaiskatsaus/",
+    "title": "Turvallisuus ja maahanmuutto – politiikan ajankohtaiskatsaus",
+    "date": "24.6.2026",
+    "time_range": "12.00–12.45",
+    "start_time": "12.00",
+    "stage": "Sata Shipbuilding -lava",
+    "organizer": "Perussuomalaiset",
+    "description": "Perussuomalaisten oma ohjelmasisältö",
+    "speakers": [
+      {
+        "name": "Joakim Vigelius",
+        "role": "",
+        "title": "kansanedustaja",
+        "organization": "perussuomalaiset"
+      },
+      {
+        "name": "Mari Rantanen",
+        "role": "",
+        "title": "sisäministeri",
+        "organization": "Perussuomalaiset"
+      }
+    ],
+    "error": null
+  },
+  {
     "post_id": "52356",
     "url": "https://www.suomiareena.fi/event/talta-voisi-nayttaa-yhteispohjoismainen-huippuyliopisto/",
     "title": "Tältä voisi näyttää yhteispohjoismainen huippuyliopisto?",
@@ -3374,6 +3914,56 @@
         "role": "",
         "title": "Toimitusjohtaja",
         "organization": "Suomen Yrittäjät"
+      }
+    ],
+    "error": null
+  },
+  {
+    "post_id": "74999",
+    "url": "https://www.suomiareena.fi/event/ostoslistalla-onnellinen-ruoka-mita-se-on/",
+    "title": "Ostoslistalla onnellinen ruoka – mitä se on?",
+    "date": "24.6.2026",
+    "time_range": "12.35–13.15",
+    "start_time": "12.35",
+    "stage": "Satakunta-lava",
+    "organizer": "SuomiAreenan Ruokapäivä",
+    "description": "Poliitikot ja asiantuntijat yhteen keräävä keskustelu, jossa pureksitaan läpi Suomen uusi ruokastrategia sekä pohditaan sitä, mistä lähtökohdista ja millä tavoitteenasetannalla suomalaista ruokapolitiikkaa tehdään?\n\nMuuttuuko agenda 2030 tultaessa?",
+    "speakers": [
+      {
+        "name": "Baba Lybeck",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
+        "name": "Mari Sandell",
+        "role": "",
+        "title": "elintarviketieteiden professori",
+        "organization": "Helsingin yliopisto"
+      },
+      {
+        "name": "Päivi Nerg",
+        "role": "",
+        "title": "valtiosihteeri",
+        "organization": "Maa- ja metsätalousministeriö"
+      },
+      {
+        "name": "Jyrki Wallin",
+        "role": "",
+        "title": "toiminnajohtaja",
+        "organization": "MTK"
+      },
+      {
+        "name": "Janne Jukkola",
+        "role": "",
+        "title": "kansanedustaja",
+        "organization": "Kokoomus"
+      },
+      {
+        "name": "Loviisa ja Elli",
+        "role": "",
+        "title": "Maitotilan siskot",
+        "organization": ""
       }
     ],
     "error": null
@@ -3644,6 +4234,32 @@
         "role": "",
         "title": "Kansanedustaja ja RKP:n eduskuntaryhmän puheenjohtaja",
         "organization": "RKP"
+      }
+    ],
+    "error": null
+  },
+  {
+    "post_id": "75003",
+    "url": "https://www.suomiareena.fi/event/ministerin-haastattelu-miten-ruokavienti-tuplataan/",
+    "title": "Ministerin haastattelu: miten ruokavienti tuplataan?",
+    "date": "24.6.2026",
+    "time_range": "13.15–13.45",
+    "start_time": "13.15",
+    "stage": "Satakunta-lava",
+    "organizer": "SuomiAreenan Ruokapäivä",
+    "description": "Hallituksen tavoitteena on kaksinkertaistaa ruokavienti, mutta nykyvauhdilla tavoite karkaa.\n\nMiten suomalaisesta ruuasta tehdään nykyistä merkittävämpi vientituote. Mitkä ovat Suomen vahvuudet kansainvälisillä markkinoilla?\n\nHaastateltavana Suomen ulkomaankauppa- ja kehitysministeri Ville Tavio.",
+    "speakers": [
+      {
+        "name": "Baba Lybeck",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
+        "name": "Ville Tavio",
+        "role": "",
+        "title": "Suomen ulkomaankauppa- ja kehitysministeri",
+        "organization": ""
       }
     ],
     "error": null
@@ -4185,6 +4801,44 @@
     "error": null
   },
   {
+    "post_id": "63314",
+    "url": "https://www.suomiareena.fi/event/ai-is-here-to-stay-how-media-and-politics-will-change-in-the-next-few-years/",
+    "title": "AI is here to stay: how media and politics will change in the next few years",
+    "date": "24.6.2026",
+    "time_range": "16.00–16.45",
+    "start_time": "16.00",
+    "stage": "Sata Shipbuilding -lava",
+    "organizer": "Schibsted",
+    "description": "In her intro-keynote, Victorina Demirel, will set the stage with a practical and future-oriented perspective on how AI is transforming journalism, media, politics, and the way people consume information. Her keynote will be followed by a panel discussion.\n\nThe session will explore how AI is already being used in newsrooms today, what is real versus hype, and how citizens may soon consume news through AI assistants that summarize, personalize, explain, and enable conversation. Will people still read articles in ten years, or will journalism increasingly appear as audio, video, summaries, and “liquid content”?\n\nThe keynote and panel will also examine what remains valuable regardless of format: unique journalism, verification, editorial accountability, and trust. As synthetic content becomes easier to create, how can audiences know what to trust, and how can media organizations maintain credibility?\n\nThe discussion will also address AI’s impact on politics, campaigning, regulation, democracy, jobs, resilience against manipulation, environmental concerns, and who benefits from AI-driven change, and who risks being left behind.",
+    "speakers": [
+      {
+        "name": "Jaakko Loikkanen",
+        "role": "Juontaja",
+        "title": "toimittaja",
+        "organization": ""
+      },
+      {
+        "name": "Victorina Demirel",
+        "role": "",
+        "title": "Head of Data & AI Enablement",
+        "organization": "Schibsted"
+      },
+      {
+        "name": "Kalle Silfverberg",
+        "role": "",
+        "title": "päätoimittaja",
+        "organization": "Hufvudstadsbladet"
+      },
+      {
+        "name": "Maggie Keskinen",
+        "role": "",
+        "title": "Secretary General",
+        "organization": "National Coalition Party"
+      }
+    ],
+    "error": null
+  },
+  {
     "post_id": "52635",
     "url": "https://www.suomiareena.fi/event/luottamus-ja-resilienssi-pohjoismaiden-kriisinkestavyyden-perustana-2/",
     "title": "Luottamus ja resilienssi Pohjoismaiden kriisinkestävyyden perustana",
@@ -4192,22 +4846,31 @@
     "time_range": "16.00–16.30",
     "start_time": "16.00",
     "stage": "Kaupungintalon pihan lava",
-    "organizer": "",
-    "description": "Mitä?",
+    "organizer": "SuomiAreena",
+    "description": "Miten pohjoismainen yhteiskunta rakentaa psykologista resilienssiä, huoltovarmuutta ja turvallisuuden tunnetta muuttuvassa maailmassa? Miten psykologinen resilienssi syntyy yksilön, perheen ja yhteisöjen tasolla, ja, miten turvallisuuden tunnetta vahvistetaan epävarmuuden, disinformaation ja globaalien kriisien aikana?",
     "speakers": [
       {
+        "name": "Marleena Pelli",
+        "role": "",
+        "title": "Juontaja",
+        "organization": ""
+      },
+      {
         "name": "Hilma Salonen",
+        "role": "",
         "title": "Senior Research Fellow",
         "organization": "Nordregio"
       },
       {
         "name": "Jonna Lehikoinen",
-        "title": "erityisasiantuntija",
-        "organization": "Itla"
+        "role": "",
+        "title": "Erityisasiantuntija",
+        "organization": "Itla (lapsen 1000 ensimmäistä päivää)"
       },
       {
         "name": "Nasima Razmyar",
-        "title": "kansanedustaja",
+        "role": "",
+        "title": "Kansanedustaja",
         "organization": "SDP"
       }
     ],
@@ -4476,27 +5139,37 @@
     "time_range": "17.00–17.45",
     "start_time": "17.00",
     "stage": "Kaupungintalon pihan lava",
-    "organizer": "",
-    "description": "Mitä?",
+    "organizer": "SuomiAreena",
+    "description": "Pohjoismaat trendaavat kaikissa pohjoismaissa ja yhteistyötä tiivistetään nyt nopeammin kuin aikoihin. Mihin kaikkeen Pohjoismaat pystyvät tiiviimmällä yhteistyöllä? Luottamus on pohjoismaisen mallin perusta, mutta polarisoituvassa maailmassa sitä myös rapautetaan aktiivisesti ulkopuolelta. Miten Pohjoismaat voivat säilyttää asemansa korkean luottamuksen yhteiskuntina ja kukoistaa yhdessä?",
     "speakers": [
       {
+        "name": "Marleena Pelli",
+        "role": "",
+        "title": "Juontaja",
+        "organization": ""
+      },
+      {
         "name": "Matti Vanhanen",
-        "title": "valtioneuvos",
-        "organization": "Keskusta"
+        "role": "",
+        "title": "Valtioneuvos",
+        "organization": ""
       },
       {
         "name": "Anders Adlercreutz",
-        "title": "opetusministeri ja pohjoismaisen yhteistyön ministeri",
+        "role": "",
+        "title": "Opetusministeri ja Pohjoismaisen yhteistyön ministeri",
         "organization": "RKP"
       },
       {
         "name": "Ville Väyrynen",
+        "role": "",
         "title": "Pohjoismaiden neuvoston presidentti",
-        "organization": "kansanedustaja, Kokoomus"
+        "organization": ""
       },
       {
         "name": "Eva Biaudet",
-        "title": "kansanedustaja",
+        "role": "",
+        "title": "Kansanedustaja",
         "organization": "RKP"
       }
     ],
@@ -4726,7 +5399,29 @@
     "stage": "Raatihuoneenpuiston lava",
     "organizer": "SuomiAreena ja UN Women Suomi",
     "description": "SuomiAreenan ja UN Women Suomen yhdessä toteuttama Tyttöjen ilta käsittelee monipuolisesti tasa-arvon ja inklusiivisuuden merkitystä yhteiskuntaluottamukselle ja -kehitykselle.\n\nTasa-arvo ja inkluusio ovat jääneet globaalin ja kotimaisen poliittisen kehityksen myötä keskustelunaiheina liiaksi sivuun, ja samalla inkluusiosta on tullut kulttuurisotien polttoainetta ja identiteettipolitiikkaa.\n\nPäivän ohjelmassa aktivoidaan erityisesti miehiä mukaan tasa-arvon puolesta sekä naisiin kohdistuvan väkivallan vastaiseen työhön. Siksi päivän aikana puhutaan myös miesten kesken All Male Panelissa, joka kerää yhteen eri yhteiskunnan osa-alueilta tunnettuja miehiä puhumaan tasa-arvosta ja sen merkityksestä eri aloilla.\n\nTyttöjen ilta huipentuu klo 18 Raatihuoneenpuiston lavalla, jossa SuomiAreenan yhtenä pääpuhujana nähdään naisiin kohdistuvaa seksuaalista väkivaltaa vastaan maailmanlaajuisesti työtä tehnyt ranskalainen David Pelicot. Hänen kanssaan lavalla keskustelee tasavallan presidentin puoliso Suzanne Innes-Stubb. Tyttöjen illan mahdollistaa Louhento Säätiö.\n\nKoko ohjelma julkaistaan kesäkuun ensimmäisellä viikolla.",
-    "speakers": [],
+    "speakers": [
+      {
+        "name": "Suzanne Innes-Stubb",
+        "role": "",
+        "title": "",
+        "organization": "",
+        "source": "news"
+      },
+      {
+        "name": "Jaana Hirsikangas",
+        "role": "",
+        "title": "toiminnanjohtaja",
+        "organization": "UN Women Suomi",
+        "source": "news"
+      },
+      {
+        "name": "Saara Särmä",
+        "role": "",
+        "title": "tutkija, taiteilija",
+        "organization": "",
+        "source": "news"
+      }
+    ],
     "error": null
   },
   {
@@ -4866,34 +5561,48 @@
     "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/coolcationeista-guggenheimiin-tallainen-on-suomiareenan-matkailupaiva/",
+    "post_id": "67853",
+    "url": "https://www.suomiareena.fi/event/emma-thompson-jason-segel-ja-suomikuvan-rakentajat/",
     "title": "Emma Thompson, Jason Segel ja suomikuvan rakentajat",
     "date": "25.6.2026",
     "time_range": "10.00–10.30",
     "start_time": "10.00",
     "stage": "Paviljonki",
-    "organizer": "",
-    "description": "",
+    "organizer": "SuomiAreena",
+    "description": "Mikä merkitys kansainvälisillä elokuvatuotannoilla on suomikuvan muodostumiselle? Miten Emma Thompsonin sekä Jason Segelin kaltaisten elokuvatähtien vierailut järjestetään ja mitä matkakohteita heille näytetään?",
     "speakers": [
       {
+        "name": "Shahin Doagu",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
+        "name": "Maria Nykänen",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
         "name": "Hanna Salonen",
-        "title": "Mediaminds",
-        "organization": "ex-Film-in-Finland"
+        "role": "",
+        "title": "",
+        "organization": "Mediaminds, ex-Film-in-Finland"
       },
       {
         "name": "Laura Sutinen",
-        "title": "Emma Thompson -kuiskaaja",
+        "role": "",
+        "title": "Emma Thompson –kuiskaaja",
         "organization": "Mediaminds"
       },
       {
         "name": "Kristiina Hietasaari",
+        "role": "",
         "title": "johtaja",
         "organization": "Visit Finland"
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
   },
   {
     "post_id": "1230",
@@ -5170,23 +5879,36 @@
     "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/coolcationeista-guggenheimiin-tallainen-on-suomiareenan-matkailupaiva/",
+    "post_id": "67857",
+    "url": "https://www.suomiareena.fi/event/tyoministerin-haastattelu-nain-matkailu-voi-ratkaista-nuorten-kesatyokriisin/",
     "title": "Työministerin haastattelu: Näin matkailu voi ratkaista nuorten kesätyökriisin",
     "date": "25.6.2026",
     "time_range": "10.30–11.00",
     "start_time": "10.30",
     "stage": "Paviljonki",
-    "organizer": "",
-    "description": "",
+    "organizer": "SuomiAreena",
+    "description": "Nuorten kesätyöpaikkojen määrä on vähentynyt samaan aikaan, kun yhä useampi nuori etsii ensimmäistä kosketustaan työelämään. Matkailu-, ravintola- ja palveluala ovat kuitenkin edelleen Suomen suurimpia nuorten työllistäjiä ja monelle ensimmäinen askel työuralle.\n\nTyöministeri Matias Marttisen haastattelussa tarkastellaan, miten nuorten työllistymismahdollisuuksia voidaan parantaa, mitä kasvua matkailuala tarvitsee luodakseen lisää työpaikkoja ja millaisia uudistuksia työmarkkinoilla tarvitaan.",
     "speakers": [
       {
+        "name": "Shahin Doagu",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
+        "name": "Maria Nykänen",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
         "name": "Matias Marttinen",
-        "title": "työministeri"
+        "role": "",
+        "title": "Työministeri",
+        "organization": ""
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
   },
   {
     "post_id": "1438",
@@ -5327,43 +6049,60 @@
     "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/coolcationeista-guggenheimiin-tallainen-on-suomiareenan-matkailupaiva/",
+    "post_id": "67858",
+    "url": "https://www.suomiareena.fi/event/tallaista-tyoelamaa-matkailu-tuottaa/",
     "title": "Tällaista työelämää matkailu tuottaa",
     "date": "25.6.2026",
     "time_range": "11.00–11.45",
     "start_time": "11.00",
     "stage": "Paviljonki",
-    "organizer": "",
-    "description": "",
+    "organizer": "SuomiAreena",
+    "description": "Millaisilla päätöksillä matkailusta tehdään ala, joka ei ainoastaan työllistä paljon, vaan myös hyvin? Millaisia osaajia matkailu tarvitsee ja millaisia osaajia se tuottaa?\n\nKeskustelussa pureudutaan työllistämisvaikutusten lisäksi nuorten kesätyökriisiin, sesonkityöhön, määräaikaisuuksiin ja siihen, mikä merkitys on sillä, että ala on monelle ensimmäinen kosketus työelämään.\n\nSamalla pohditaan, miten matkailun kasvu voidaan kääntää pysyviksi työpaikoiksi, paremmiksi urapoluiksi ja kestävämmäksi työelämäksi ilman, että alan joustavuus katoaa.",
     "speakers": [
       {
+        "name": "Shahin Doagu",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
+        "name": "Maria Nykänen",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
         "name": "Annika Rönni-Sällinen",
+        "role": "",
         "title": "puheenjohtaja",
         "organization": "PAM"
       },
       {
         "name": "Johanna Väätäinen",
-        "title": "matkailu- ja ravitsemiskaupan toimialajohtaja",
-        "organization": "Satakunnan Osuuskauppa"
+        "role": "",
+        "title": "Satakunnan Osuuskaupan matkailu- ja ravitsemiskaupan toimialajohtaja",
+        "organization": ""
       },
       {
         "name": "Minna Tuorila",
-        "title": "Viking Line"
+        "role": "",
+        "title": "",
+        "organization": "Viking Line"
       },
       {
         "name": "Timo Saranpää",
-        "title": "puheenjohtaja",
-        "organization": "SMAL"
+        "role": "",
+        "title": "SMALin puheenjohtaja",
+        "organization": ""
       },
       {
         "name": "Pinja Perholehto",
+        "role": "",
         "title": "kansanedustaja",
         "organization": "SDP"
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
   },
   {
     "post_id": "1324",
@@ -5618,36 +6357,54 @@
     "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/coolcationeista-guggenheimiin-tallainen-on-suomiareenan-matkailupaiva/",
+    "post_id": "67862",
+    "url": "https://www.suomiareena.fi/event/suomimatkailun-uusi-karki-helsinki-saaristo-ita-suomi-vai/",
     "title": "Suomimatkailun uusi kärki: Helsinki, saaristo, Itä-Suomi vai?",
     "date": "25.6.2026",
     "time_range": "12.00–12.45",
     "start_time": "12.00",
     "stage": "Paviljonki",
     "organizer": "",
-    "description": "",
+    "description": "Alueiden kautta päästään syventymään laajasti matkailuun: kasvutoimenpiteet, saavutettavuus, markkinointi, tapahtumat, seminaarit/kongressit, eri kohderyhmät.",
     "speakers": [
       {
+        "name": "Shahin Doagu",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
+        "name": "Maria Nykänen",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
         "name": "Lumia Ankkuri",
+        "role": "",
         "title": "markkinointi- ja viestintäjohtaja",
         "organization": "Messukeskus"
       },
       {
         "name": "Marko Alander",
-        "title": "S-ryhmän matkailukaupan johtaja"
+        "role": "",
+        "title": "S-ryhmän matkailukaupan johtaja",
+        "organization": ""
       },
       {
         "name": "Minna Tuorila",
-        "title": "Viking Line"
+        "role": "",
+        "title": "",
+        "organization": "Viking Line"
       },
       {
         "name": "Kristiina Hietasaari",
-        "title": "Visit Finland"
+        "role": "",
+        "title": "johtaja",
+        "organization": "Visit Finland"
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
   },
   {
     "post_id": "1270",
@@ -5694,27 +6451,92 @@
     "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/coolcationeista-guggenheimiin-tallainen-on-suomiareenan-matkailupaiva/",
+    "post_id": "67851",
+    "url": "https://www.suomiareena.fi/event/10-places-not-to-visit-in-finland-nain-itse-kirjoitamme-matkailusta/",
     "title": "10 places NOT to visit in Finland – näin itse kirjoitamme matkailusta",
     "date": "25.6.2026",
     "time_range": "13.00–13.15",
     "start_time": "13.00",
     "stage": "Paviljonki",
     "organizer": "",
-    "description": "",
+    "description": "Millainen matkailumaa Suomi on ja miten se ilmentyy lehtien sivuilla? Keskustelussa päätoimittajat ja median tekijät pohtivat, miten suomalainen media kirjoittaa matkailusta, millaiset aiheet nousevat otsikoihin ja miksi matkailukeskustelu kallistuu usein joko ongelmiin tai markkinointipuheeseen. Samalla tarkastellaan, miten kasvu ja kestävyys sovitetaan julkisessa keskustelussa yhteen sekä eroavatko paikallismedioiden ja valtakunnallisten medioiden näkökulmat toisistaan, kun matkailusta puhutaan.",
     "speakers": [
       {
+        "name": "Shahin Doagu",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
+        "name": "Maria Nykänen",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
         "name": "Tomi Lähdeniemi",
-        "title": "Satakunnan kansan päätoimittaja"
+        "role": "",
+        "title": "Satakunnan kansan päätoimittaja",
+        "organization": ""
       },
       {
         "name": "Antti Kokkonen",
-        "title": "Lapin Kansan entinen päätoimittaja"
+        "role": "",
+        "title": "Lapin Kansan entinen päätoimittaja",
+        "organization": ""
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
+  },
+  {
+    "post_id": "67846",
+    "url": "https://www.suomiareena.fi/event/coolcationeista-hushpitalityyn-millainen-merkitys-vastuullisuustrendeilla-oikeasti-on/",
+    "title": "Coolcationeista Hushpitalityyn – millainen merkitys vastuullisuustrendeillä oikeasti on?",
+    "date": "25.6.2026",
+    "time_range": "13.00–13.55",
+    "start_time": "13.00",
+    "stage": "Paviljonki",
+    "organizer": "SuomiAreena",
+    "description": "Matkailun trendisanat vaihtuvat nopeasti, mutta muuttuvatko samalla myös matkailijoiden valinnat? Viileämpää ilmastoa suosivat coolcationit, hiljaisuutta ja palautumista korostava hushpitality, lähimatkailu, junamatkailu ja vastuulliset elämykset ovat nousseet matkailupuheen ytimeen.\n\nMutta näkyvätkö trendit aidosti matkailijoiden käyttäytymisessä vai enemmän markkinointipuheessa?\n\nKeskustelussa pureudutaan siihen, mitä matkailun vastuullisuus- ja hyvinvointitrendit oikeastaan tarkoittavat, ketkä niitä seuraavat ja miten ne vaikuttavat matkailualaan.",
+    "speakers": [
+      {
+        "name": "Shahin Doagu",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
+        "name": "Maria Nykänen",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
+        "name": "Jessica Virtanen",
+        "role": "",
+        "title": "SMALin varapuheenjohtaja",
+        "organization": ""
+      },
+      {
+        "name": "Mervi Toivonen",
+        "role": "",
+        "title": "Director, Travel Industry Cooperation",
+        "organization": "Visit Finland"
+      },
+      {
+        "name": "Aino Huilaja",
+        "role": "",
+        "title": "",
+        "organization": "VanLife"
+      },
+      {
+        "name": "Piia Elo",
+        "role": "",
+        "title": "Turun pormestari",
+        "organization": ""
+      }
+    ],
+    "error": null
   },
   {
     "post_id": "1240",
@@ -5814,6 +6636,75 @@
         "organization": "Etla"
       }
     ],
+    "error": null
+  },
+  {
+    "post_id": "74522",
+    "url": "https://www.suomiareena.fi/event/koulutus-takaa-suomen-kasvun/",
+    "title": "Koulutus takaa Suomen kasvun",
+    "date": "25.6.2026",
+    "time_range": "13.00–13.45",
+    "start_time": "13.00",
+    "stage": "Kaupungintalon pihan lava",
+    "organizer": "SuomiAreena, OAJ, Sanasto, Suomen Kustannusyhdistys, Kirjakauppaliitto",
+    "description": "Mistä koulutuksen luvut todella kertovat? Etlan tutkimuspäällikkö Hanna Virtanen kertoo tuoreimmat faktat koulutuksen talous- ja hyvinvointivaikutuksista, minkä jälkeen kansanedustajat keskustelevat koulutuksen merkityksestä Suomen kasvulle ja kilpailukyvylle. Jos nuorten velvollisuus on opiskella, miten yhteiskunta varmistaa, että kouluttautuminen kannattaa? Keskustelussa etsitään keinoja pitkäjänteiseen kasvu- ja koulutuspolitiikkaan yli vaalikausien.\n\nOhjelmakokonaisuuden kumppaneina toimivat Opetusalan Ammattijärjestö OAJ, Sanasto – kirjallisuuden tekijänoikeusjärjestö, Suomen Kustannusyhdistys sekä Kirjakauppaliitto.",
+    "speakers": [
+      {
+        "name": "Ville Blåfield",
+        "role": "Juontaja",
+        "title": "",
+        "organization": ""
+      },
+      {
+        "name": "Markus Lohi",
+        "role": "",
+        "title": "Kansanedustaja",
+        "organization": "Keskusta"
+      },
+      {
+        "name": "Ville Valkonen",
+        "role": "",
+        "title": "Kansanedustaja",
+        "organization": "Kokoomus"
+      },
+      {
+        "name": "Joona Räsänen",
+        "role": "",
+        "title": "kansanedustaja",
+        "organization": "SDP"
+      },
+      {
+        "name": "Inka Hopsu",
+        "role": "",
+        "title": "Kansanedustaja",
+        "organization": "Vihreät"
+      },
+      {
+        "name": "Hanna Virtanen",
+        "role": "",
+        "title": "Tutkimuspäällikkö",
+        "organization": "Etla"
+      },
+      {
+        "name": "Katarina Murto",
+        "role": "",
+        "title": "Puheenjohtaja",
+        "organization": "OAJ"
+      }
+    ],
+    "error": null
+  },
+  {
+    "post_id": "60545",
+    "url": "https://www.suomiareena.fi/event/politiikkaradion-debatit/",
+    "title": "Politiikkaradion debatit",
+    "date": "25.6.2026",
+    "time_range": "13.00–15.00",
+    "start_time": "13.00",
+    "stage": "Muu sijainti",
+    "organizer": "Yle",
+    "description": "Maailmanjärjestys on muutoksessa ja kulttuurisodat repivät äänestäjiä – mikä on politiikan suunta tässä ja nyt?\n\nPolitiikkaradion debateissa lavalle nousevat eturivin poliitikot.\n\nPolitiikkaradion debatit Ylen lavalla Porin Etelärannassa torstaina 25.5. klo 13 (suora lähetys Yle areena / Yle radio 1), klo 14 ja klo 15.",
+    "speakers": [],
     "error": null
   },
   {
@@ -6242,35 +7133,54 @@
     "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/coolcationeista-guggenheimiin-tallainen-on-suomiareenan-matkailupaiva/",
+    "post_id": "67845",
+    "url": "https://www.suomiareena.fi/event/tynnyrillinen-rahaa-vai-guggenheim-puoluerajat-ylittavaa-matkailunedistamista/",
     "title": "Tynnyrillinen rahaa vai Guggenheim? Puoluerajat ylittävää matkailunedistämistä",
     "date": "25.6.2026",
     "time_range": "14.00–14.45",
     "start_time": "14.00",
     "stage": "Paviljonki",
     "organizer": "",
-    "description": "",
+    "description": "Miten suomalaisesta matkailusta tehdään samaan aikaan kestävää ja Islannin kaltainen menestystarina? Keskustelussa poliitikot etsivät yhteisiä ratkaisuja siihen, miten Suomi houkuttelee enemmän matkailijoita. Keskustelussa pureudutaan muun muassa matkailuinvestointeihin, verotukseen, saavutettavuuteen, luvitukseen, aluepolitiikkaan sekä siihen, miten Suomi välttää yhtä aikaa liikaturismin ja aliturismin sudenkuopat.",
     "speakers": [
       {
+        "name": "Shahin Doagu",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
+        "name": "Maria Nykänen",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
         "name": "Noora Fagerström",
-        "title": "kansanedustaja (kok.)"
+        "role": "",
+        "title": "kansanedustaja",
+        "organization": "Kokoomus"
       },
       {
         "name": "Sara Seppänen",
-        "title": "kansanedustaja (PS)"
+        "role": "",
+        "title": "Kansanedustaja",
+        "organization": "Perussuomalaiset"
       },
       {
         "name": "Eeva Kalli",
-        "title": "kansanedustaja (kesk.)"
+        "role": "",
+        "title": "Kansanedustaja",
+        "organization": "Keskusta"
       },
       {
         "name": "Atte Harjanne",
-        "title": "kansanedustaja (vihreät)"
+        "role": "",
+        "title": "kansanedustaja",
+        "organization": "Vihreät"
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
   },
   {
     "post_id": "1373",
@@ -6549,70 +7459,110 @@
     "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/coolcationeista-guggenheimiin-tallainen-on-suomiareenan-matkailupaiva/",
+    "post_id": "75161",
+    "url": "https://www.suomiareena.fi/event/voitetaan-sauna-takaisin-ja-monistetaan-joulupukki-joka-kuntaan/",
     "title": "Voitetaan sauna takaisin ja monistetaan joulupukki joka kuntaan",
     "date": "25.6.2026",
     "time_range": "15.00–15.45",
     "start_time": "15.00",
     "stage": "Paviljonki",
-    "organizer": "",
-    "description": "",
+    "organizer": "SuomiAreena",
+    "description": "Mitä tapahtuu, kun Suomen luovan alan rohkeimmat ideat valjastetaan matkailun käyttöön? Tässä ongelmanratkaisukierroksessa lavalla ei vain keskustella siitä, miksi Suomi häviää matkailukilpailussa, vaan rakennetaan uusia konsepteja yhdessä yleisön kanssa. Missä kaikkialla joulupukin pitäisi asua ja voisiko kesäpukista tulla uusi matkailuvaltti? Millaisia saunatoteutuksia Suomi tarvitsee, jotta Helsinki voisi kilpailla Tukholman ja Oslon kanssa? Entä miten suomalainen luontokokemus tuotteistetaan tavalla, joka vetoaa yhä useampaan kansainväliseen matkailijaan? Keskustelun aikana etsitään myös vastausta suurempaan kysymykseen: mitä Suomesta vielä puuttuu? Voiko juuri SuomiAreenan lavalla syntyä idea Suomen seuraavasta matkailuilmiöstä tai kokonaan uudesta matkakohteesta?",
     "speakers": [
       {
+        "name": "Shahin Doagu",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
+        "name": "Maria Nykänen",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
         "name": "Heli Mäki-Fränti",
-        "title": "toimitusjohtaja",
-        "organization": "SMAL"
+        "role": "",
+        "title": "SMALin toimitusjohtaja",
+        "organization": ""
       },
       {
         "name": "Meira Pappi",
+        "role": "",
         "title": "johtava erityisasiantuntija",
         "organization": "Ulkoministeriö"
       },
       {
         "name": "Juha Itkonen",
-        "title": "kirjailija"
+        "role": "",
+        "title": "Kirjailija",
+        "organization": ""
+      },
+      {
+        "name": "Anna Rosaliina Kauno",
+        "role": "",
+        "title": "läpimurto Jussi elokuvasta \"Jossain on valo joka ei sammu\"",
+        "organization": ""
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/coolcationeista-guggenheimiin-tallainen-on-suomiareenan-matkailupaiva/",
+    "post_id": "75156",
+    "url": "https://www.suomiareena.fi/event/kannattaako-suomen-tavoitella-olympialaisia/",
     "title": "Kannattaako Suomen tavoitella olympialaisia?",
     "date": "25.6.2026",
-    "time_range": "16.00–16.55",
+    "time_range": "16.00–16.45",
     "start_time": "16.00",
     "stage": "Paviljonki",
-    "organizer": "",
-    "description": "",
+    "organizer": "SuomiAreena",
+    "description": "Millaisia kansainvälisiä tapahtumia järjestämällä Suomi rakentaa kustannustehokkaimmin maakuvaa ja houkuttelee uusia vieraita? Keskustelussa tarkastellaan niin urheilun arvokisojen, kulttuuritapahtumien kuin Slushin kaltaisten kansainvälisten menestystapahtumien vaikutuksia Suomen tunnettuuteen, talouteen ja vetovoimaan.\n\nMitä koripallon EM-kisoista jäi Suomelle käteen, ja mitä voimme oppia tapahtumista, jotka ovat onnistuneet nostamaan Suomen maailmankartalle? Samalla pohditaan, millaisille kansainvälisille tapahtumille Suomessa on tilaa, mihin meidän kannattaa seuraavaksi panostaa ja miten Suomesta rakennetaan entistä kiinnostavampi tapahtumamaa.\n\nToki lisäksi pohditaan sitä, että onko Suomen mitään järkeä edes yrittää järjestää olympialaisia.",
     "speakers": [
       {
+        "name": "Shahin Doagu",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
+        "name": "Maria Nykänen",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
         "name": "Lumia Ankkuri",
+        "role": "",
         "title": "markkinointi- ja viestintäjohtaja",
         "organization": "Messukeskus"
       },
       {
         "name": "Ari Tammivaara",
-        "title": "koripallovalmentaja"
+        "role": "",
+        "title": "",
+        "organization": ""
       },
       {
-        "name": "Marleena Valtasoja",
-        "title": "hiihtoliitto"
+        "name": "Marleena Valtasola",
+        "role": "",
+        "title": "",
+        "organization": "Hiihtoliitto"
       },
       {
         "name": "Noora Saksa",
-        "title": "toimitusjohtaja",
-        "organization": "Slush"
+        "role": "",
+        "title": "Slush toimitusjohtaja",
+        "organization": ""
       },
       {
         "name": "Mika Poutala",
-        "title": "nuoriso- ja urheiluministeri"
+        "role": "",
+        "title": "nuoriso- ja urheiluministeri",
+        "organization": ""
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
   },
   {
     "post_id": "1399",
@@ -6847,35 +7797,54 @@
     "error": null
   },
   {
-    "post_id": null,
-    "url": "https://www.suomiareena.fi/2026/06/coolcationeista-guggenheimiin-tallainen-on-suomiareenan-matkailupaiva/",
+    "post_id": "67842",
+    "url": "https://www.suomiareena.fi/event/kylla-kansa-tietaa-hallitus-vastaan-oppositio-matkailuvisa/",
     "title": "Kyllä kansa tietää! – hallitus vastaan oppositio matkailuvisa",
     "date": "25.6.2026",
-    "time_range": "17.00–18.00",
+    "time_range": "17.00–17.45",
     "start_time": "17.00",
     "stage": "Paviljonki",
     "organizer": "",
-    "description": "",
+    "description": "Mitä suomalaiset oikeasti ajattelevat matkailusta ja uskaltavatko poliitikot arvata oikein? Tässä vauhdikkaassa visassa hallitus ja oppositio ottavat mittaa toisistaan vastaamalla kysymyksiin, joissa fakta on määritelty kansan mielipiteeksi.\n\nMikä tulee ensimmäisenä mieleen Suomesta matkakohteena? Mikä saa turistin rakastumaan tai pettymään? Mitä matkailija kysyy tekoälyltä ennen kuin valitsee Suomen kohteeksi? Entä mikä Suomessa on liian kallista ja miksi emme ole Euroopan top 10 – listalla?\n\nPelkkä arvaaminen ei riitä, sillä jokaisen kysymyksen jälkeen poliitikot keskustelevat vastauksista ja niiden merkityksestä.",
     "speakers": [
       {
+        "name": "Shahin Doagu",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
+        "name": "Maria Nykänen",
+        "role": "Juontaja",
+        "title": "",
+        "organization": "MTV"
+      },
+      {
         "name": "Mari Holopainen",
-        "title": "kansanedustaja (vihreät)"
+        "role": "",
+        "title": "kansanedustaja",
+        "organization": "Vihreät"
       },
       {
         "name": "Noora Fagerström",
-        "title": "kansanedustaja (kok.)"
+        "role": "",
+        "title": "kansanedustaja",
+        "organization": "Kokoomus"
       },
       {
         "name": "Mikko Ollikainen",
-        "title": "kansanedustaja (RKP)"
+        "role": "",
+        "title": "kansanedustaja",
+        "organization": "RKP"
       },
       {
         "name": "Jani Kokko",
-        "title": "kansanedustaja (SDP)"
+        "role": "",
+        "title": "kansanedustaja",
+        "organization": "SDP"
       }
     ],
-    "error": null,
-    "source": "theme-day-article"
+    "error": null
   },
   {
     "post_id": "1342",
@@ -8205,6 +9174,62 @@
         "role": "Juontaja",
         "title": "Toimittaja",
         "organization": ""
+      }
+    ],
+    "error": null
+  },
+  {
+    "post_id": "63924",
+    "url": "https://www.suomiareena.fi/event/keskustelua-kukoistavasta-tyoelamasta-kahvitauon-aarella/",
+    "title": "Keskustelua kukoistavasta työelämästä kahvitauon äärellä",
+    "date": "26.6.2026",
+    "time_range": "13.00–13.45",
+    "start_time": "13.00",
+    "stage": "Satakunta-lava",
+    "organizer": "Kahvitauko-podcast",
+    "description": "Kahvitauko -podcastin juontajat keskustelevat vieraidensa kanssa paneelissa työelämän toimivista käytännöistä, jotka vahvistavat työn merkityksellisyyttä ja työn iloa, yhteenkuuluvuuden tunnetta ja työyhteisöjen kukoistusta.",
+    "speakers": [
+      {
+        "name": "Maarit Slätis",
+        "role": "Juontaja",
+        "title": "työhyvinvointivalmentaja",
+        "organization": "Find your Mind työhyvinvointipalvelut"
+      },
+      {
+        "name": "Mervi Männikkö",
+        "role": "",
+        "title": "työyhteisöpedagogi",
+        "organization": "MerDeco"
+      },
+      {
+        "name": "Veera Forsbacka",
+        "role": "",
+        "title": "markkinointipäällikkö",
+        "organization": "Porin Puuvilla"
+      },
+      {
+        "name": "Henna Paananen",
+        "role": "",
+        "title": "HR Business Partner",
+        "organization": "Pihla Group Oy"
+      },
+      {
+        "name": "Eeva Terävä",
+        "role": "",
+        "title": "suunnittelujohtaja",
+        "organization": "Martela Oyj"
+      },
+      {
+        "name": "Ilkka Kaasinen",
+        "role": "",
+        "title": "toimitusjohtaja",
+        "organization": "Workspace Oy"
+      },
+      {
+        "name": "Carla Björndahl",
+        "role": "",
+        "title": "toimitusjohtaja",
+        "organization": "Muotitavaratalo Ratsula"
       }
     ],
     "error": null

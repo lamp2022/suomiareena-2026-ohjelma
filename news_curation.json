@@ -1,0 +1,36 @@
+{
+  "_note": "Curated news-post speakers to merge into ohjelma events (public site). Keyed by ohjelma post_id. Role/title/organization hand-cleaned from ajankohtaista prose; messy/auto descriptors discarded. source=news marks origin.",
+  "4893": {
+    "event": "Tulevaisuuden Suomi",
+    "speakers": [
+      {"name": "Roni Back", "role": "Juontaja", "title": "somevaikuttaja", "organization": ""},
+      {"name": "Pinja Orre", "role": "Juontaja", "title": "vaikuttajamarkkinoinnin asiantuntija", "organization": "PING Helsinki"},
+      {"name": "Jutta Karjalainen", "role": "", "title": "johtava asiantuntija, tekoäly ja vastuullisuus", "organization": "Tieto Tech Consulting"},
+      {"name": "Mirjam Sokka", "role": "", "title": "perustaja ja toimitusjohtaja", "organization": "Kaiko"},
+      {"name": "Viliina Välimäki", "role": "", "title": "Porin valtuuston puheenjohtaja (kok.)", "organization": ""},
+      {"name": "Jesse “Branu” Branthin", "role": "", "title": "tubettaja", "organization": ""},
+      {"name": "Niko Tamminen", "role": "", "title": "varapuheenjohtaja", "organization": "Suomen Partiolaiset"},
+      {"name": "Jayla Tammiharju", "role": "", "title": "", "organization": ""},
+      {"name": "Leo Niemelä", "role": "", "title": "tietoturvajohtaja", "organization": "S-Pankki"},
+      {"name": "Senni Jyrkiäinen", "role": "", "title": "valmiuspäällikkö", "organization": "Mediapooli"},
+      {"name": "Juho Rautvaara", "role": "", "title": "somevaikuttaja", "organization": ""},
+      {"name": "Perttu Jussila", "role": "", "title": "kaupunginhallituksen varapuheenjohtaja (vihr.)", "organization": "Tampere"},
+      {"name": "Anni Lintula", "role": "", "title": "toiminnanjohtaja", "organization": "IAB Finland"},
+      {"name": "Tommi Ristola", "role": "", "title": "somevaikuttaja", "organization": ""},
+      {"name": "Tero Ojanperä", "role": "", "title": "teknologiayrittäjä, sijoittaja, tekoälyvaikuttaja", "organization": ""},
+      {"name": "Shadia Rask", "role": "", "title": "väestötutkija ja yhdenvertaisuuskouluttaja", "organization": "Hanken"},
+      {"name": "Olli Mäkelä", "role": "", "title": "yksityisen sektorin toimialajohtaja", "organization": "Tieto Tech Consulting"},
+      {"name": "Emmi Jäkkö", "role": "", "title": "toiminnanjohtaja", "organization": "Lukukeskus"},
+      {"name": "Jaana Hirsikangas", "role": "", "title": "toiminnanjohtaja", "organization": "UN Women Suomi"},
+      {"name": "Mikko Käkelä", "role": "", "title": "toimitusjohtaja", "organization": "ETL"}
+    ]
+  },
+  "4780": {
+    "event": "Tyttöjen ilta (24.6. klo 18–19, Raatihuoneenpuiston lava)",
+    "speakers": [
+      {"name": "Suzanne Innes-Stubb", "role": "", "title": "", "organization": ""},
+      {"name": "Jaana Hirsikangas", "role": "", "title": "toiminnanjohtaja", "organization": "UN Women Suomi"},
+      {"name": "Saara Särmä", "role": "", "title": "tutkija, taiteilija", "organization": ""}
+    ]
+  }
+}
