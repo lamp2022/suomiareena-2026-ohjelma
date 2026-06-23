@@ -1,0 +1,134 @@
+{
+ "_meta": {
+  "checked": "2026-06-15",
+  "note": "fingerprint=sha256 of crawl <strong> speaker names per post. Re-read a post via WebFetch only if its fingerprint changed or url is new. All 24 posts read 2026-06-15: every festival speaker already in events.json ohjelma."
+ },
+ "posts": {
+  "https://www.suomiareena.fi/2026/03/justin-trudeau-suomiareenan-paapuhujaksi/": {
+   "fingerprint": "37c8ae02cb29ebf4",
+   "n_speakers": 2,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/06/tusu/": {
+   "fingerprint": "85d177ba88ad0d52",
+   "n_speakers": 31,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/06/suomiareenan-ruokapaiva-suomalaisesta-ruoasta-kansainvalinen-menestystarina/": {
+   "fingerprint": "410ec74ae24eb8f6",
+   "n_speakers": 12,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/06/gallen-kallelan-kadusta-entistakin-viihtyisampi-suomiareenan-kohtaamispaikka/": {
+   "fingerprint": "14827b844eac5970",
+   "n_speakers": 2,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/06/suomiareenan-sotepaiva-tehdaan-sotesta-tarpeetonta/": {
+   "fingerprint": "f907035508564048",
+   "n_speakers": 14,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/06/coolcationeista-guggenheimiin-tallainen-on-suomiareenan-matkailupaiva/": {
+   "fingerprint": "d3b426fbf56a7046",
+   "n_speakers": 35,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/06/suomiareenan-koulupaiva-milla-osaamisella-suomi-parjaa-2030-luvulla/": {
+   "fingerprint": "9c095e5169fc0400",
+   "n_speakers": 12,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/06/suomiareenan-suuri-turvallisuuspaiva/": {
+   "fingerprint": "f6528bf3aec33287",
+   "n_speakers": 26,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/06/pohjoismaiden-paiva-miten-pohjola-menestyy-yhdessa/": {
+   "fingerprint": "4f53cda18c2baa0c",
+   "n_speakers": 0,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/05/suomiareenan-20-vuotisjuhlavuoden-ohjelma-on-julkaistu-paateemana-luottamus-ja-lavoilla-kansainvalisia-huippunimia/": {
+   "fingerprint": "4f53cda18c2baa0c",
+   "n_speakers": 0,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/05/minneapolisin-piispa-jen-nagel-suomiareenaan/": {
+   "fingerprint": "b04910c49b07aea9",
+   "n_speakers": 8,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/05/tyttojen-ilta/": {
+   "fingerprint": "be1a33220d013082",
+   "n_speakers": 5,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/05/lukutaidon-merkitys-yhteiskuntaluottamukselle-puhutti-luottamusillassa-katso-tallenne-keskustelusta/": {
+   "fingerprint": "4c8a463bd73437d3",
+   "n_speakers": 4,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/05/sata-shipbuilding-ankkuroituu-porin-tapahtumakesaan-jaanmurtajahankkeiden-mahdollistaja-suomiareenan-ja-pori-jazzin-kumppaniksi/": {
+   "fingerprint": "3a6c71da3442c0a0",
+   "n_speakers": 3,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/04/sosiaalisen-median-vaikuttajat-osaksi-suomiareenan-yhteiskunnallista-keskustelua/": {
+   "fingerprint": "9742c46004506153",
+   "n_speakers": 2,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/04/osallistuvat-organisaatiot/": {
+   "fingerprint": "4f53cda18c2baa0c",
+   "n_speakers": 0,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/03/suomiareenan-festivaalialue-uudistuu/": {
+   "fingerprint": "aba6dd81b3d33069",
+   "n_speakers": 1,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/03/luottamusyhteiskunnassa/": {
+   "fingerprint": "5045f930b32c4f86",
+   "n_speakers": 6,
+   "verdict": "not-in-ohjelma (past side-event)",
+   "truly_new": [
+    "Elisa Markula",
+    "Ilkka Brander",
+    "Mykhailo Vydoinyk",
+    "Susanna Takkunen (past luottamusilta panel, not 23-26.6 ohjelma)"
+   ]
+  },
+  "https://www.suomiareena.fi/2026/03/kirkkolava/": {
+   "fingerprint": "9f4cf3714b422378",
+   "n_speakers": 2,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/01/saara-iivari-vauhdittamaan-suomiareenan-kehitysta/": {
+   "fingerprint": "ecc630a5274ee38f",
+   "n_speakers": 4,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/01/suomiareenan-pro-bono-haku-on-nyt-auki/": {
+   "fingerprint": "4f53cda18c2baa0c",
+   "n_speakers": 0,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/06/suomiareenan-kesatyoohjelma-tarjoaa-kesatyon-30-nuorelle/": {
+   "fingerprint": "fd5e79c161781b24",
+   "n_speakers": 3,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/06/tyttojen-ilta-koska-turvallinen-yhteiskunta-kuuluu-kaikille/": {
+   "fingerprint": "960686a12e9dc040",
+   "n_speakers": 3,
+   "verdict": "all-in-ohjelma"
+  },
+  "https://www.suomiareena.fi/2026/06/investointien-suomi-evaat-tulevaisuuden-kasvuun/": {
+   "fingerprint": "f0ec21c543ebb717",
+   "n_speakers": 30,
+   "verdict": "all-in-ohjelma"
+  }
+ }
+}

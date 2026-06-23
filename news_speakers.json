@@ -27,12 +27,21 @@
   "ohjelma_match": null
  },
  {
+  "name": "Anna Storm",
+  "descriptor": "yhteiskuntasuhdejohtaja, Posti ​",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
   "name": "Anni Lintula",
   "descriptor": "toiminnanjohtaja, IAB Finland.",
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -81,6 +90,15 @@
   "ohjelma_match": null
  },
  {
+  "name": "Antti Kurvinen ",
+  "descriptor": "kansanedustaja, Keskusta",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": "Antti Kurvinen"
+ },
+ {
   "name": "Antti Lehtinen",
   "descriptor": ".",
   "posts": [
@@ -94,6 +112,33 @@
    "suomiareenan-festivaalialue-uudistuu"
   ],
   "status": "probable_byline",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Antti Leino",
+  "descriptor": "yhteiskuntasuhdejohtaja, Davie",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Antti Norkio",
+  "descriptor": "ekonomisti, Pellervon taloustutkimus",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Anu Ubaud",
+  "descriptor": "ja",
+  "posts": [
+   "tyttojen-ilta-koska-turvallinen-yhteiskunta-kuuluu-kaikille"
+  ],
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -130,7 +175,7 @@
    "minneapolisin-piispa-jen-nagel-suomiareenaan",
    "tyttojen-ilta"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -172,12 +217,21 @@
   "ohjelma_match": null
  },
  {
+  "name": "Emilia Kullas",
+  "descriptor": "johtaja, EVA",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
   "name": "Emmi Jäkkö",
   "descriptor": "toiminnanjohtaja, Lukukeskus",
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -245,6 +299,15 @@
   "ohjelma_match": null
  },
  {
+  "name": "Heidi Salmi",
+  "descriptor": "tuoteryhmäjohtaja, S-ryhmä",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
   "name": "Heli Mäki-Fränti",
   "descriptor": "toimitusjohtaja, SMAL",
   "posts": [
@@ -287,7 +350,16 @@
    "tusu",
    "tyttojen-ilta"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Jani Eloranta",
+  "descriptor": "johtaja, henkilöasiakkaat, Nordea",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -295,6 +367,15 @@
   "descriptor": "kansanedustaja (SDP)",
   "posts": [
    "coolcationeista-guggenheimiin-tallainen-on-suomiareenan-matkailupaiva"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Jani Toivola",
+  "descriptor": "ja jatkot Raatihuoneenpuiston lavalla",
+  "posts": [
+   "tyttojen-ilta-koska-turvallinen-yhteiskunta-kuuluu-kaikille"
   ],
   "status": "in_ohjelma",
   "ohjelma_match": null
@@ -312,6 +393,7 @@
   "name": "Janne Jukkola",
   "descriptor": "kansanedustaja, Kokoomus",
   "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun",
    "suomiareenan-ruokapaiva-suomalaisesta-ruoasta-kansainvalinen-menestystarina"
   ],
   "status": "in_ohjelma",
@@ -341,7 +423,7 @@
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -368,7 +450,7 @@
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -418,6 +500,15 @@
   "ohjelma_match": null
  },
  {
+  "name": "Joona Räsänen ",
+  "descriptor": "kansanedustaja, SDP",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": "Joona Räsänen"
+ },
+ {
   "name": "Juha Itkonen",
   "descriptor": "kirjailija",
   "posts": [
@@ -433,7 +524,16 @@
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Jukka Erlund",
+  "descriptor": "talous- ja rahoitusjohtaja, Fazer",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -461,7 +561,7 @@
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -501,6 +601,24 @@
   "ohjelma_match": null
  },
  {
+  "name": "Kim Salmi",
+  "descriptor": "toimitusjohtaja, Helsinki Shipyard",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Krista Kiuru",
+  "descriptor": "Porin kaupunginvaltuuston puheenjohtaja ​",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
   "name": "Kristian Tornivaara",
   "descriptor": "toimitusjohtaja, Saab Finland Oy",
   "posts": [
@@ -516,6 +634,15 @@
    "coolcationeista-guggenheimiin-tallainen-on-suomiareenan-matkailupaiva"
   ],
   "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Laura Arikka",
+  "descriptor": "Erätauko-säätiöstä jatkaa.",
+  "posts": [
+   "suomiareenan-kesatyoohjelma-tarjoaa-kesatyon-30-nuorelle"
+  ],
+  "status": "new",
   "ohjelma_match": null
  },
  {
@@ -551,7 +678,7 @@
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -582,6 +709,15 @@
   "ohjelma_match": null
  },
  {
+  "name": "Maija Liiri",
+  "descriptor": "toimitusjohtaja, Millennium- teknologiapalkinto",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
   "name": "Mari Holopainen",
   "descriptor": "kansanedustaja, Vihreät",
   "posts": [
@@ -605,6 +741,15 @@
   "descriptor": "kyberopettaja ja everstiluutnantti, Maanpuolustuskorkeakoulu",
   "posts": [
    "suomiareenan-suuri-turvallisuuspaiva"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Maria Mäkynen",
+  "descriptor": "yhteiskuntasuhdejohtaja, Insinööriliitto",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
   ],
   "status": "in_ohjelma",
   "ohjelma_match": null
@@ -659,6 +804,15 @@
   "descriptor": "kansanedustaja (SDP)",
   "posts": [
    "suomiareenan-sotepaiva-tehdaan-sotesta-tarpeetonta"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Matti Kontu",
+  "descriptor": "toimitusjohtaja, Vahterus",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
   ],
   "status": "in_ohjelma",
   "ohjelma_match": null
@@ -721,6 +875,7 @@
   "name": "Mika Lintilä",
   "descriptor": "kansanedustaja ( kesk .)",
   "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun",
    "suomiareenan-suuri-turvallisuuspaiva"
   ],
   "status": "in_ohjelma",
@@ -731,6 +886,15 @@
   "descriptor": "nuoriso- ja urheiluministeri",
   "posts": [
    "coolcationeista-guggenheimiin-tallainen-on-suomiareenan-matkailupaiva"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Mikael Pentikäinen",
+  "descriptor": "toimitusjohtaja, Suomen Yrittäjät",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
   ],
   "status": "in_ohjelma",
   "ohjelma_match": null
@@ -750,7 +914,7 @@
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -808,6 +972,24 @@
   "ohjelma_match": null
  },
  {
+  "name": "Minna Vanhala- Harmala",
+  "descriptor": "toimitusjohtaja, Perheyritysten liitto",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "new",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Minttu Viitanen",
+  "descriptor": "kertoo.",
+  "posts": [
+   "suomiareenan-kesatyoohjelma-tarjoaa-kesatyon-30-nuorelle"
+  ],
+  "status": "new",
+  "ohjelma_match": null
+ },
+ {
   "name": "Miriam Hautala",
   "descriptor": "tutkija , J yväskylän yliopisto",
   "posts": [
@@ -822,7 +1004,7 @@
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -853,6 +1035,15 @@
   "ohjelma_match": null
  },
  {
+  "name": "Niina Luomanen",
+  "descriptor": "johtaja, pk-yritysasiakkaat, Nordea",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
   "name": "Niklas Kaskeala",
   "descriptor": "",
   "posts": [
@@ -876,7 +1067,7 @@
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -893,6 +1084,7 @@
   "descriptor": "toimitusjohtaja, Slush",
   "posts": [
    "coolcationeista-guggenheimiin-tallainen-on-suomiareenan-matkailupaiva",
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun",
    "tusu"
   ],
   "status": "in_ohjelma",
@@ -904,7 +1096,7 @@
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -940,7 +1132,7 @@
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -994,7 +1186,7 @@
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -1016,12 +1208,39 @@
   "ohjelma_match": null
  },
  {
+  "name": "Reija Airas",
+  "descriptor": "henkilöstö- ja viestintäjohtaja, Veikkaus",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Riku Salomaa",
+  "descriptor": "toimitusjohtaja, Nordic Music Partners",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
   "name": "Roni Back",
   "descriptor": "sekä vaikuttajamarkkinoinnin asiantuntija",
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Roope Lehtinen",
+  "descriptor": "vastaava tuottaja, Fire Monkey",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -1039,8 +1258,8 @@
   "posts": [
    "tyttojen-ilta"
   ],
-  "status": "new",
-  "ohjelma_match": null
+  "status": "in_ohjelma",
+  "ohjelma_match": "Saara Särmä"
  },
  {
   "name": "Sampsa Jolma",
@@ -1049,6 +1268,15 @@
    "sata-shipbuilding-ankkuroituu-porin-tapahtumakesaan-jaanmurtajahankkeiden-mahdollistaja-suomiareenan-ja-pori-jazzin-kumppaniksi"
   ],
   "status": "new",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Sara Norberg",
+  "descriptor": "COO & Partner, Hildur , Take Two Studios",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -1084,7 +1312,7 @@
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -1093,7 +1321,7 @@
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -1121,7 +1349,7 @@
    "minneapolisin-piispa-jen-nagel-suomiareenaan",
    "tyttojen-ilta"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -1143,6 +1371,15 @@
   "ohjelma_match": "Tapio Luoma"
  },
  {
+  "name": "Taru Tujunen",
+  "descriptor": "vanhempi neuvonantaja, Sitra",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
   "name": "Terhi Suominen",
   "descriptor": "Secretary General, Atlantic Council of Finland",
   "posts": [
@@ -1157,13 +1394,14 @@
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
   "name": "Timo Harakka",
   "descriptor": "kansanedustaja (sd.)",
   "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun",
    "tusu"
   ],
   "status": "in_ohjelma",
@@ -1176,6 +1414,15 @@
    "coolcationeista-guggenheimiin-tallainen-on-suomiareenan-matkailupaiva"
   ],
   "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Tomi Alakoski",
+  "descriptor": "Suomen 4H-liitosta kertoo.",
+  "posts": [
+   "suomiareenan-kesatyoohjelma-tarjoaa-kesatyon-30-nuorelle"
+  ],
+  "status": "new",
   "ohjelma_match": null
  },
  {
@@ -1202,7 +1449,7 @@
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {
@@ -1210,6 +1457,15 @@
   "descriptor": "Professor of International Relations, Tampere University",
   "posts": [
    "suomiareenan-suuri-turvallisuuspaiva"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Tuomo Puumala",
+  "descriptor": "yhteiskuntasuhdejohtaja, Veikkaus",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
   ],
   "status": "in_ohjelma",
   "ohjelma_match": null
@@ -1224,12 +1480,30 @@
   "ohjelma_match": null
  },
  {
+  "name": "Vilhelm Junnila ",
+  "descriptor": "kansanedustaja, Perussuomalaiset",
+  "posts": [
+   "investointien-suomi-evaat-tulevaisuuden-kasvuun"
+  ],
+  "status": "in_ohjelma",
+  "ohjelma_match": "Vilhelm Junnila"
+ },
+ {
   "name": "Viliina Välimäki",
   "descriptor": "Porin valtuuston puheenjohtaja, (kok.) Keskustelua fasilitoi vaikuttaja-aktivisti",
   "posts": [
    "tusu"
   ],
-  "status": "new",
+  "status": "in_ohjelma",
+  "ohjelma_match": null
+ },
+ {
+  "name": "Ville Blåfield",
+  "descriptor": ".",
+  "posts": [
+   "tyttojen-ilta-koska-turvallinen-yhteiskunta-kuuluu-kaikille"
+  ],
+  "status": "in_ohjelma",
   "ohjelma_match": null
  },
  {

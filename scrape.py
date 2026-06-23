@@ -651,16 +651,34 @@ VIEW_JS = """
   }
 
   function search(q) { filterRows(q); renderPills(q); }
-  if (sEl) sEl.addEventListener('input', function(){ search(sEl.value); });
+
+  /* scroll memory: tapping a name collapses the list; Back restores the spot you came from */
+  let preFilterScroll = null;
+  function clearFilter(restore) {
+    if (sEl) sEl.value = '';
+    search('');
+    if (restore && preFilterScroll != null) window.scrollTo(0, preFilterScroll);
+    preFilterScroll = null;
+  }
+  if (sEl) sEl.addEventListener('input', function(){
+    if (sEl.value.trim().length < 2) preFilterScroll = null;   // manual clear drops the anchor
+    search(sEl.value);
+  });
   document.addEventListener('click', function(ev){
     const a = ev.target.closest('a.spk, #spk-sugg button');   // name link OR picker pill
     if (a && a.dataset.spk) {
       ev.preventDefault();
-      location.hash = '#puhujat';
+      if (preFilterScroll == null) preFilterScroll = window.scrollY;   // remember entry point
+      if (location.hash !== '#puhujat') location.hash = '#puhujat';
       if (sEl) sEl.value = a.dataset.spk;
       search(a.dataset.spk);                                   // exact name -> rows narrow, pills clear
-      if (sEl) sEl.scrollIntoView({block:'nearest'});
+      history.pushState({spkFiltered:true}, '');               // give Back a target = unfiltered list
+      window.scrollTo(0, 0);                                    // results from top of the short list
     }
+  });
+  window.addEventListener('popstate', function(){
+    if (preFilterScroll != null) { clearFilter(true); return; } // Back out of a filter -> restore spot
+    fromHash();
   });
 
   fromHash();
